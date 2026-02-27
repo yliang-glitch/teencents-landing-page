@@ -6,16 +6,16 @@
 
 @layer base {
   :root {
-    --background: 202 40% 8%;
+    --background: 225 44.4% 7.1%;
     --foreground: 205 60% 96%;
 
-    --card: 201 42% 12%;
+    --card: 224 45.5% 12.9%;
     --card-foreground: 205 60% 96%;
 
-    --popover: 201 42% 12%;
+    --popover: 224 45.5% 12.9%;
     --popover-foreground: 205 60% 96%;
 
-    --primary: 172 72% 52%;
+    --primary: 190.1 100% 50%;
     --primary-foreground: 203 56% 8%;
 
     --secondary: 207 34% 17%;
@@ -24,10 +24,10 @@
     --muted: 207 34% 17%;
     --muted-foreground: 208 22% 66%;
 
-    --accent: 34 92% 58%;
+    --accent: 320 100% 50%;
     --accent-foreground: 203 56% 8%;
 
-    --cyan: 196 95% 56%;
+    --cyan: 157.4 100% 50%;
     --cyan-foreground: 203 56% 8%;
 
     --destructive: 0 84% 60%;
@@ -35,25 +35,25 @@
 
     --border: 207 28% 24%;
     --input: 207 28% 24%;
-    --ring: 172 72% 52%;
+    --ring: 190.1 100% 50%;
 
     --radius: 1rem;
 
-    --glow-primary: 0 0 40px hsl(172 72% 52% / 0.32);
-    --glow-accent: 0 0 40px hsl(34 92% 58% / 0.3);
-    --glow-cyan: 0 0 40px hsl(196 95% 56% / 0.34);
+    --glow-primary: 0 0 40px hsl(190.1 100% 50% / 0.32);
+    --glow-accent: 0 0 40px hsl(320 100% 50% / 0.3);
+    --glow-cyan: 0 0 40px hsl(157.4 100% 50% / 0.34);
 
     --font-display: "Sora", sans-serif;
     --font-body: "Manrope", sans-serif;
 
-    --sidebar-background: 202 40% 8%;
+    --sidebar-background: 225 44.4% 7.1%;
     --sidebar-foreground: 205 60% 96%;
-    --sidebar-primary: 172 72% 52%;
+    --sidebar-primary: 190.1 100% 50%;
     --sidebar-primary-foreground: 203 56% 8%;
     --sidebar-accent: 207 34% 17%;
     --sidebar-accent-foreground: 205 60% 96%;
     --sidebar-border: 207 28% 24%;
-    --sidebar-ring: 172 72% 52%;
+    --sidebar-ring: 190.1 100% 50%;
   }
 }
 
@@ -65,9 +65,9 @@
     @apply bg-background text-foreground;
     font-family: var(--font-body);
     background-image:
-      radial-gradient(circle at 12% -10%, hsl(196 95% 56% / 0.16), transparent 40%),
-      radial-gradient(circle at 100% 8%, hsl(34 92% 58% / 0.14), transparent 35%),
-      linear-gradient(160deg, hsl(202 40% 8%) 0%, hsl(207 34% 12%) 100%);
+      radial-gradient(circle at 12% -10%, hsl(190.1 100% 50% / 0.16), transparent 40%),
+      radial-gradient(circle at 100% 8%, hsl(320 100% 50% / 0.14), transparent 35%),
+      linear-gradient(160deg, hsl(225 44.4% 7.1%) 0%, hsl(224 45.5% 12.9%) 100%);
     background-attachment: fixed;
   }
   h1,
@@ -92,22 +92,22 @@
   }
   .text-gradient-neon {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(120deg, hsl(172 72% 52%), hsl(196 95% 56%));
+    background-image: linear-gradient(120deg, hsl(190.1 100% 50%), hsl(157.4 100% 50%));
   }
   .text-gradient-accent {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(120deg, hsl(34 92% 58%), hsl(172 72% 52%));
+    background-image: linear-gradient(120deg, hsl(320 100% 50%), hsl(157.4 100% 50%));
   }
   .mesh-panel {
     background:
-      linear-gradient(130deg, hsl(201 42% 15% / 0.84), hsl(206 36% 12% / 0.92)),
-      radial-gradient(circle at 18% 12%, hsl(196 95% 56% / 0.16), transparent 38%),
-      radial-gradient(circle at 86% 82%, hsl(34 92% 58% / 0.14), transparent 44%);
+      linear-gradient(130deg, hsl(224 45.5% 14% / 0.84), hsl(224 45.5% 10% / 0.92)),
+      radial-gradient(circle at 18% 12%, hsl(190.1 100% 50% / 0.16), transparent 38%),
+      radial-gradient(circle at 86% 82%, hsl(320 100% 50% / 0.14), transparent 44%);
     border: 1px solid hsl(207 28% 24% / 0.65);
     backdrop-filter: blur(14px);
   }
   .surface-card {
-    background: linear-gradient(150deg, hsl(201 42% 13% / 0.9), hsl(207 34% 11% / 0.9));
+    background: linear-gradient(150deg, hsl(224 45.5% 13% / 0.9), hsl(224 45.5% 10.5% / 0.9));
     border: 1px solid hsl(207 28% 24% / 0.7);
   }
   .section-divider {
@@ -119,9 +119,9 @@
 /* Geometric background pattern */
 .geo-pattern {
   background-image:
-    radial-gradient(circle at 18% 30%, hsl(172 72% 52% / 0.1) 0%, transparent 45%),
-    radial-gradient(circle at 84% 22%, hsl(34 92% 58% / 0.08) 0%, transparent 42%),
-    radial-gradient(circle at 72% 86%, hsl(196 95% 56% / 0.06) 0%, transparent 44%);
+    radial-gradient(circle at 18% 30%, hsl(190.1 100% 50% / 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 84% 22%, hsl(320 100% 50% / 0.08) 0%, transparent 42%),
+    radial-gradient(circle at 72% 86%, hsl(157.4 100% 50% / 0.06) 0%, transparent 44%);
 }
 
 .geo-grid {
