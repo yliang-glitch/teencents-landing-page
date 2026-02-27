@@ -17,8 +17,8 @@ const benefits = [
   },
   {
     icon: Gamepad2,
-    title: "Gamified Momentum",
-    description: "Streaks, challenges, badges, and milestones that turn money habits into wins — never feels like homework.",
+    title: "Gain Financial Independence",
+    description: "Streaks, challenges, and milestones that turn money habits into real skills and independence — never feels like homework",
     color: "text-cyan",
     glow: "group-hover:shadow-[0_0_32px_hsl(196_95%_56%/0.35)]",
   },
