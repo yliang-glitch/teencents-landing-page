@@ -24,7 +24,7 @@ const HeroSection = () => {
           </div>
 
           <h1 className="opacity-0 animate-fade-up-delay-1 font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight mb-6">
-            TeenCents: Build money confidence before adulthood — track your hustles, own your goals,{" "}
+            Build money confidence before adulthood — track your hustles, own your goals,{" "}
             <span className="text-gradient-neon">stack your future.</span>
           </h1>
 
