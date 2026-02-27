@@ -1,4 +1,4 @@
-import { Wallet, Target, Rocket } from "lucide-react";
+import { Wallet, Target, Rocket, Sparkles } from "lucide-react";
 
 const steps = [
   {
@@ -25,6 +25,14 @@ const steps = [
     gradient: "from-cyan/20 to-accent/20",
     border: "border-cyan/30",
   },
+  {
+    num: "04",
+    title: "AI-native, not overwhelming",
+    description: "Intelligence reduces friction and personalizes guidance without overwhelming users.",
+    icon: Sparkles,
+    gradient: "from-accent/20 to-cyan/20",
+    border: "border-accent/30",
+  },
 ];
 
 const HowItWorksSection = () => {
@@ -36,7 +44,7 @@ const HowItWorksSection = () => {
           How it <span className="text-gradient-neon">works</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {steps.map((step) => (
             <div key={step.num} className="surface-card rounded-2xl p-7 flex flex-col items-center text-center">
               {/* Illustration placeholder */}
