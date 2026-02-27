@@ -29,7 +29,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="opacity-0 animate-fade-up-delay-2 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed">
-            From side gigs to savings goals, TeenCents gives teens a money app that feels fun, clear, and built for how they actually live.
+            From side gigs to savings goals, teens get a money app that feels fun, clear, and built for how they actually live.
           </p>
 
           <div className="opacity-0 animate-fade-up-delay-3">
