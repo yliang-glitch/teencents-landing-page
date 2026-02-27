@@ -13,13 +13,13 @@ const FinalCTASection = () => {
           Ready to launch your teen <span className="text-gradient-accent">money era</span>?
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Join the waitlist for first access, feature drops, and family beta invites from teencents.ai.
+          Join the waitlist for early access, feature drops, and first-wave family invites.
         </p>
 
         <div className="mt-8">
           <WaitlistForm buttonText="Get early access" showToggle />
           <p className="mt-4 text-sm text-muted-foreground">
-            First 500 waitlist members unlock exclusive beta perks
+            First 500 waitlist members unlock bonus beta perks
           </p>
         </div>
       </div>

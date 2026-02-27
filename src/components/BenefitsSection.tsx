@@ -11,14 +11,14 @@ const benefits = [
   {
     icon: Target,
     title: "Save For Real Goals",
-    description: "Visual buckets for what teens actually care about: tech, trips, and first-car funds.",
+    description: "Visual buckets for what teens actually care about: tech drops, trips, and first-car funds.",
     color: "text-accent",
     glow: "group-hover:shadow-[0_0_32px_hsl(34_92%_58%/0.35)]",
   },
   {
     icon: Gamepad2,
     title: "Gamified Progress",
-    description: "Streaks, challenges, and milestones keep consistency high without feeling like homework.",
+    description: "Streaks, challenges, and milestones keep your momentum up without feeling like homework.",
     color: "text-cyan",
     glow: "group-hover:shadow-[0_0_32px_hsl(196_95%_56%/0.35)]",
   },
@@ -40,7 +40,7 @@ const BenefitsSection = () => {
             Why TeenCents
           </p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold">
-            A design teens will <span className="text-gradient-accent">actually use</span>
+            Money tools teens will <span className="text-gradient-accent">actually use</span>
           </h2>
         </div>
 

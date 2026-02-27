@@ -7,7 +7,6 @@ const HeroSection = () => {
       <div className="absolute inset-0 geo-grid opacity-25" />
 
       {/* Floating geometric shapes */}
-      <div className="absolute top-28 left-[8%] w-20 h-20 rounded-xl border border-primary/30 rotate-12 animate-float opacity-50" />
       <div className="absolute bottom-24 right-[12%] w-16 h-16 rounded-full border border-accent/30 animate-float opacity-45" style={{ animationDelay: "2s" }} />
       <div className="absolute top-1/3 right-[6%] w-12 h-12 rounded-lg border border-cyan/30 rotate-45 animate-float opacity-30" style={{ animationDelay: "4s" }} />
 
@@ -25,17 +24,18 @@ const HeroSection = () => {
           </div>
 
           <h1 className="opacity-0 animate-fade-up-delay-1 font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight mb-6">
-            Build <span className="text-gradient-neon">money confidence</span> before adulthood.
+            TeenCents: Build money confidence before adulthood — track your hustles, own your goals,{" "}
+            <span className="text-gradient-neon">stack your future.</span>
           </h1>
 
           <p className="opacity-0 animate-fade-up-delay-2 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed">
-            TeenCents helps teens track income, control spending, and hit savings goals with a product that feels like their world.
+            From side gigs to savings goals, TeenCents gives teens a money app that feels fun, clear, and built for how they actually live.
           </p>
 
           <div className="opacity-0 animate-fade-up-delay-3">
             <WaitlistForm showToggle />
             <p className="mt-4 text-sm text-muted-foreground">
-              Early beta opens this spring for limited families
+              Spring beta is limited. Grab your spot early.
             </p>
           </div>
         </div>
@@ -48,18 +48,18 @@ const HeroSection = () => {
             </div>
             <div className="grid grid-cols-2 gap-3 mb-5">
               <div className="rounded-xl bg-secondary/55 p-4 border border-border/70">
-                <p className="text-xs text-muted-foreground mb-1">Side hustle</p>
+                <p className="text-xs text-muted-foreground mb-1">Cash in</p>
                 <p className="font-display text-2xl font-bold">$86</p>
               </div>
               <div className="rounded-xl bg-secondary/55 p-4 border border-border/70">
-                <p className="text-xs text-muted-foreground mb-1">Goal progress</p>
+                <p className="text-xs text-muted-foreground mb-1">Goal mode</p>
                 <p className="font-display text-2xl font-bold">74%</p>
               </div>
             </div>
             <div className="w-full h-2 rounded-full bg-secondary/70 overflow-hidden mb-3">
               <div className="h-full w-3/4 bg-gradient-to-r from-primary to-cyan rounded-full" />
             </div>
-            <p className="text-xs text-muted-foreground">Phone upgrade fund: $445 of $600</p>
+            <p className="text-xs text-muted-foreground">Headphone fund: $445 of $600</p>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ const Footer = () => {
             </a>
             <p className="mt-2 text-sm text-muted-foreground">teencents.ai</p>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
-              The money app that helps teens build habits, confidence, and independence.
+              The money app for teens building habits, confidence, and independence.
             </p>
           </div>
 
