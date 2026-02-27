@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,54 +6,54 @@
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 96%;
+    --background: 202 40% 8%;
+    --foreground: 205 60% 96%;
 
-    --card: 222 47% 9%;
-    --card-foreground: 210 40% 96%;
+    --card: 201 42% 12%;
+    --card-foreground: 205 60% 96%;
 
-    --popover: 222 47% 9%;
-    --popover-foreground: 210 40% 96%;
+    --popover: 201 42% 12%;
+    --popover-foreground: 205 60% 96%;
 
-    --primary: 160 60% 55%;
-    --primary-foreground: 222 47% 6%;
+    --primary: 172 72% 52%;
+    --primary-foreground: 203 56% 8%;
 
-    --secondary: 222 30% 14%;
-    --secondary-foreground: 210 40% 90%;
+    --secondary: 207 34% 17%;
+    --secondary-foreground: 205 55% 91%;
 
-    --muted: 222 30% 14%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 207 34% 17%;
+    --muted-foreground: 208 22% 66%;
 
-    --accent: 315 85% 60%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 34 92% 58%;
+    --accent-foreground: 203 56% 8%;
 
-    --cyan: 185 85% 55%;
-    --cyan-foreground: 222 47% 6%;
+    --cyan: 196 95% 56%;
+    --cyan-foreground: 203 56% 8%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 222 30% 16%;
-    --input: 222 30% 16%;
-    --ring: 160 60% 55%;
+    --border: 207 28% 24%;
+    --input: 207 28% 24%;
+    --ring: 172 72% 52%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    --glow-primary: 0 0 40px hsl(160 60% 55% / 0.3);
-    --glow-accent: 0 0 40px hsl(315 85% 60% / 0.3);
-    --glow-cyan: 0 0 40px hsl(185 85% 55% / 0.3);
+    --glow-primary: 0 0 40px hsl(172 72% 52% / 0.32);
+    --glow-accent: 0 0 40px hsl(34 92% 58% / 0.3);
+    --glow-cyan: 0 0 40px hsl(196 95% 56% / 0.34);
 
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-display: "Sora", sans-serif;
+    --font-body: "Manrope", sans-serif;
 
-    --sidebar-background: 222 47% 8%;
-    --sidebar-foreground: 210 40% 96%;
-    --sidebar-primary: 160 60% 55%;
-    --sidebar-primary-foreground: 222 47% 6%;
-    --sidebar-accent: 222 30% 14%;
-    --sidebar-accent-foreground: 210 40% 96%;
-    --sidebar-border: 222 30% 16%;
-    --sidebar-ring: 160 60% 55%;
+    --sidebar-background: 202 40% 8%;
+    --sidebar-foreground: 205 60% 96%;
+    --sidebar-primary: 172 72% 52%;
+    --sidebar-primary-foreground: 203 56% 8%;
+    --sidebar-accent: 207 34% 17%;
+    --sidebar-accent-foreground: 205 60% 96%;
+    --sidebar-border: 207 28% 24%;
+    --sidebar-ring: 172 72% 52%;
   }
 }
 
@@ -64,8 +64,18 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    background-image:
+      radial-gradient(circle at 12% -10%, hsl(196 95% 56% / 0.16), transparent 40%),
+      radial-gradient(circle at 100% 8%, hsl(34 92% 58% / 0.14), transparent 35%),
+      linear-gradient(160deg, hsl(202 40% 8%) 0%, hsl(207 34% 12%) 100%);
+    background-attachment: fixed;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
   }
 }
@@ -82,25 +92,41 @@
   }
   .text-gradient-neon {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(160 60% 55%), hsl(185 85% 55%));
+    background-image: linear-gradient(120deg, hsl(172 72% 52%), hsl(196 95% 56%));
   }
   .text-gradient-accent {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(315 85% 60%), hsl(160 60% 55%));
+    background-image: linear-gradient(120deg, hsl(34 92% 58%), hsl(172 72% 52%));
+  }
+  .mesh-panel {
+    background:
+      linear-gradient(130deg, hsl(201 42% 15% / 0.84), hsl(206 36% 12% / 0.92)),
+      radial-gradient(circle at 18% 12%, hsl(196 95% 56% / 0.16), transparent 38%),
+      radial-gradient(circle at 86% 82%, hsl(34 92% 58% / 0.14), transparent 44%);
+    border: 1px solid hsl(207 28% 24% / 0.65);
+    backdrop-filter: blur(14px);
+  }
+  .surface-card {
+    background: linear-gradient(150deg, hsl(201 42% 13% / 0.9), hsl(207 34% 11% / 0.9));
+    border: 1px solid hsl(207 28% 24% / 0.7);
+  }
+  .section-divider {
+    background: linear-gradient(90deg, transparent, hsl(207 28% 24% / 0.8), transparent);
+    height: 1px;
   }
 }
 
 /* Geometric background pattern */
 .geo-pattern {
   background-image:
-    radial-gradient(circle at 20% 50%, hsl(160 60% 55% / 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, hsl(315 85% 60% / 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 60% 80%, hsl(185 85% 55% / 0.03) 0%, transparent 50%);
+    radial-gradient(circle at 18% 30%, hsl(172 72% 52% / 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 84% 22%, hsl(34 92% 58% / 0.08) 0%, transparent 42%),
+    radial-gradient(circle at 72% 86%, hsl(196 95% 56% / 0.06) 0%, transparent 44%);
 }
 
 .geo-grid {
   background-image:
-    linear-gradient(hsl(222 30% 16% / 0.4) 1px, transparent 1px),
-    linear-gradient(90deg, hsl(222 30% 16% / 0.4) 1px, transparent 1px);
+    linear-gradient(hsl(207 28% 24% / 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(207 28% 24% / 0.3) 1px, transparent 1px);
   background-size: 60px 60px;
 }

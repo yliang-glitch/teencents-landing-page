@@ -3,24 +3,24 @@ import { Wallet, Target, Rocket } from "lucide-react";
 const steps = [
   {
     num: "01",
-    title: "Log your money in seconds",
-    description: "Hustles, spends, whatever — tap it in and move on.",
+    title: "Connect real habits",
+    description: "Log spending and earnings in seconds, right after it happens.",
     icon: Wallet,
     gradient: "from-primary/20 to-cyan/20",
     border: "border-primary/30",
   },
   {
     num: "02",
-    title: "Set goals that actually matter",
-    description: "New phone, concert tickets, car fund — watch them grow.",
+    title: "Pick your target",
+    description: "Set one goal, automate progress, and see your momentum build.",
     icon: Target,
     gradient: "from-accent/20 to-primary/20",
     border: "border-accent/30",
   },
   {
     num: "03",
-    title: "Level up with challenges",
-    description: "Fun challenges & safe investing practice — no real money at risk.",
+    title: "Earn confidence",
+    description: "Use challenges and simulations to practice before real stakes.",
     icon: Rocket,
     gradient: "from-cyan/20 to-accent/20",
     border: "border-cyan/30",
@@ -31,13 +31,14 @@ const HowItWorksSection = () => {
   return (
     <section className="relative py-24 px-6">
       <div className="max-w-6xl mx-auto">
+        <div className="section-divider mb-12" />
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-center mb-16">
           How it <span className="text-gradient-neon">works</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           {steps.map((step) => (
-            <div key={step.num} className="flex flex-col items-center text-center">
+            <div key={step.num} className="surface-card rounded-2xl p-7 flex flex-col items-center text-center">
               {/* Illustration placeholder */}
               <div
                 className={`w-32 h-32 rounded-2xl bg-gradient-to-br ${step.gradient} border ${step.border} flex items-center justify-center mb-6`}
@@ -46,7 +47,7 @@ const HowItWorksSection = () => {
               </div>
 
               {/* Number */}
-              <span className="font-display text-5xl font-bold text-muted-foreground/20 mb-2">
+              <span className="font-display text-5xl font-bold text-muted-foreground/25 mb-2">
                 {step.num}
               </span>
 

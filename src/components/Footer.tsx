@@ -3,19 +3,17 @@ import WaitlistForm from "./WaitlistForm";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-card/40 pt-16 pb-8 px-6">
+    <footer className="border-t border-border bg-card/30 pt-16 pb-8 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
             <a href="/" className="font-display text-2xl font-bold tracking-tight">
-              <span className="text-gradient-neon">Kashly</span>
+              <span className="text-gradient-neon">TeenCents</span>
             </a>
-            <p className="mt-2 text-sm text-muted-foreground">
-              by teencents.ai
-            </p>
+            <p className="mt-2 text-sm text-muted-foreground">teencents.ai</p>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
-              The wallet made for teens. Own your financial future.
+              The money app that helps teens build habits, confidence, and independence.
             </p>
           </div>
 
