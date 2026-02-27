@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 700" role="img" aria-label="Teen background portrait right">
+  <defs>
+    <linearGradient id="skinR" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6d3b2"/>
+      <stop offset="1" stop-color="#cf936f"/>
+    </linearGradient>
+    <linearGradient id="shirtR" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF00AA"/>
+      <stop offset="1" stop-color="#00D4FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="520" height="700" fill="none"/>
+  <circle cx="264" cy="220" r="116" fill="url(#skinR)"/>
+  <path d="M156 242c-27-101 126-180 218-112 28 21 50 58 56 95-14-7-26-7-41-2-31 9-58 39-99 40-52 2-95-23-134-21z" fill="#1b2340"/>
+  <path d="M118 420c29-77 95-121 147-121 57 0 121 46 148 122l26 160H92z" fill="url(#shirtR)"/>
+  <circle cx="232" cy="226" r="9" fill="#1f2538"/>
+  <circle cx="297" cy="226" r="9" fill="#1f2538"/>
+  <path d="M230 280c21 18 43 18 64 0" fill="none" stroke="#8f4d45" stroke-width="7" stroke-linecap="round"/>
+</svg>

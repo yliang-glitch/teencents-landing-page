@@ -5,6 +5,24 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden geo-pattern pt-20">
       {/* Grid overlay */}
       <div className="absolute inset-0 geo-grid opacity-25" />
+      <div className="absolute inset-y-0 left-0 w-[42vw] min-w-[260px] hidden md:block pointer-events-none">
+        <img
+          src="/teen-bg-left.svg"
+          alt=""
+          aria-hidden="true"
+          className="h-full w-full object-contain object-left-bottom opacity-[0.18] blur-[1px] mix-blend-screen"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/15 via-transparent to-background" />
+      </div>
+      <div className="absolute inset-y-0 right-0 w-[42vw] min-w-[260px] hidden md:block pointer-events-none">
+        <img
+          src="/teen-bg-right.svg"
+          alt=""
+          aria-hidden="true"
+          className="h-full w-full object-contain object-right-bottom opacity-[0.15] blur-[1px] mix-blend-screen"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-background/20 via-transparent to-background/5" />
+      </div>
 
       {/* Floating geometric shapes */}
       <div className="absolute bottom-24 right-[12%] w-16 h-16 rounded-full border border-accent/30 animate-float opacity-45" style={{ animationDelay: "2s" }} />
