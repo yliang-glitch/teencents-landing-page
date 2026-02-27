@@ -8,6 +8,24 @@ const HeroSection = () => {
       <div className="absolute -left-20 top-28 h-72 w-72 rounded-[42%_58%_58%_42%/47%_39%_61%_53%] bg-primary/20 blur-2xl pointer-events-none" />
       <div className="absolute right-[-120px] top-20 h-96 w-96 rounded-[66%_34%_45%_55%/40%_56%_44%_60%] bg-accent/20 blur-2xl pointer-events-none" />
       <div className="absolute left-[18%] bottom-12 h-56 w-56 rounded-[52%_48%_34%_66%/45%_35%_65%_55%] bg-cyan/15 blur-2xl pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 w-[28vw] min-w-[240px] max-w-[360px] hidden lg:block pointer-events-none">
+        <img
+          src="/teen-bg-left.svg"
+          alt=""
+          aria-hidden="true"
+          className="h-full w-full object-contain object-left-bottom opacity-[0.16] blur-[0.6px] saturate-[0.9]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/35 via-background/5 to-transparent" />
+      </div>
+      <div className="absolute inset-y-0 right-0 w-[28vw] min-w-[240px] max-w-[360px] hidden lg:block pointer-events-none">
+        <img
+          src="/teen-bg-right.svg"
+          alt=""
+          aria-hidden="true"
+          className="h-full w-full object-contain object-right-bottom opacity-[0.14] blur-[0.6px] saturate-[0.9]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-background/35 via-background/5 to-transparent" />
+      </div>
       {/* Floating geometric shapes */}
       <div className="absolute bottom-24 right-[12%] w-16 h-16 rounded-full border border-accent/30 animate-float opacity-45" style={{ animationDelay: "2s" }} />
       <div className="absolute top-1/3 right-[6%] w-12 h-12 rounded-lg border border-cyan/30 rotate-45 animate-float opacity-30" style={{ animationDelay: "4s" }} />
