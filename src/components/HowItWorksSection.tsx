@@ -27,8 +27,8 @@ const steps = [
   },
   {
     num: "04",
-    title: "AI-native, not overwhelming",
-    description: "Intelligence reduces friction and personalizes guidance without overwhelming users.",
+    title: "Lift smarter daily",
+    description: "Get gentle, timely tips and bite-sized lessons in your tone, never overwhelming",
     icon: Sparkles,
     gradient: "from-accent/20 to-cyan/20",
     border: "border-accent/30",
