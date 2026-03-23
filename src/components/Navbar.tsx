@@ -1,3 +1,5 @@
+import ThemeToggle from "./ThemeToggle";
+
 const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/75 backdrop-blur-xl">
@@ -9,6 +11,7 @@ const Navbar = () => {
           <span className="hidden sm:inline-flex text-xs text-muted-foreground font-medium tracking-wider uppercase">
             Money confidence for teens
           </span>
+          <ThemeToggle />
           <span className="inline-flex px-3 py-1 rounded-full bg-secondary/70 border border-border text-[11px] font-semibold tracking-wide uppercase">
             teencents.ai
           </span>
