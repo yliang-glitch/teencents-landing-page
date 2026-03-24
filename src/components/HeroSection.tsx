@@ -16,76 +16,61 @@ const HeroSection = () => {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/10 blur-[110px]" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-accent/10 blur-[110px]" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.08fr_0.92fr] gap-10 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-[1.02fr_0.98fr] gap-10 items-center">
         <div className="text-center lg:text-left">
-          <div className="opacity-0 animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/60 backdrop-blur-sm mb-8">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-sm font-medium text-muted-foreground">
-              Built for teens, trusted by parents
+          <div className="opacity-0 animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-secondary/65 backdrop-blur-sm mb-7">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase text-primary">
+              Beta Access Open
             </span>
           </div>
 
-          <h1 className="opacity-0 animate-fade-up-delay-1 font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight mb-6">
-            Build money confidence before adulthood — track your hustles, own your goals,{" "}
-            <span className="text-gradient-neon">stack your future.</span>
+          <h1 className="opacity-0 animate-fade-up-delay-1 font-display text-5xl sm:text-6xl md:text-7xl font-bold leading-[0.98] tracking-tight mb-6">
+            Stop reading about money.
+            <br />
+            Start{" "}
+            <span className="text-gradient-accent">
+              visualizing the hustle.
+            </span>
           </h1>
 
-          <p className="opacity-0 animate-fade-up-delay-2 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed">
-            From side gigs to savings goals, teens get a money app that feels fun, clear, and built for how they actually live.
+          <p className="opacity-0 animate-fade-up-delay-2 text-lg sm:text-2xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed">
+            The AI-powered command center for your first $1,000. Track hustle income, spot opportunities, and level up confidence daily.
           </p>
 
           <div className="opacity-0 animate-fade-up-delay-3">
             <WaitlistForm showToggle />
             <p className="mt-4 text-sm text-muted-foreground">
-              Spring beta is limited. Grab your spot early.
+              Built for teen momentum, not textbook finance.
             </p>
           </div>
         </div>
 
-        <div className="opacity-0 animate-fade-up-delay-2 mesh-panel rounded-3xl p-7 sm:p-8">
-          <div className="surface-card rounded-2xl p-6">
-            <div className="flex items-start justify-between gap-4 mb-6">
-              <div>
-                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-2">Total stack</p>
-                <p className="font-display text-4xl sm:text-5xl font-bold leading-none">$1,248</p>
-                <p className="text-xs text-primary mt-2 font-semibold">+22% this month</p>
+        <div className="opacity-0 animate-fade-up-delay-2 rounded-3xl p-1.5 bg-gradient-to-br from-primary/20 via-accent/15 to-cyan/20 border border-border/60">
+          <div className="surface-card rounded-[22px] p-4 sm:p-5">
+            <div className="mb-3 rounded-2xl border border-border/70 bg-background/60 px-4 py-3 flex items-center justify-between">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold">
+                <span className="h-3 w-3 rounded-full bg-primary" />
+                5 New Hustles Available
+              </span>
+              <span className="text-xs text-muted-foreground">Updated now</span>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 mb-3">
+              <div className="relative rounded-2xl overflow-hidden min-h-[190px] border border-border/70 bg-gradient-to-br from-secondary/80 to-background/90">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,hsl(var(--primary)/0.25),transparent_50%),radial-gradient(circle_at_80%_80%,hsl(var(--accent)/0.22),transparent_52%)]" />
+                <div className="absolute bottom-3 left-3 text-xs font-semibold tracking-wide text-foreground/90">#Lifestyle</div>
               </div>
-              <div className="relative w-20 h-20 rounded-[30px] bg-gradient-to-br from-accent/35 via-primary/30 to-cyan/35 border border-border/70 flex items-center justify-center shadow-[0_12px_24px_rgba(0,0,0,0.25)]">
-                <div className="w-12 h-12 rounded-full bg-background/90 flex items-center justify-center text-xl">
-                  😎
-                </div>
-                <div className="absolute -bottom-1 -right-1 px-2 py-0.5 rounded-full bg-accent text-accent-foreground text-[10px] font-bold">
-                  LVL 7
-                </div>
+              <div className="relative rounded-2xl overflow-hidden min-h-[190px] border border-border/70 bg-gradient-to-br from-secondary/80 to-background/90">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,hsl(var(--cyan)/0.22),transparent_45%),radial-gradient(circle_at_20%_78%,hsl(var(--accent)/0.18),transparent_48%)]" />
+                <div className="absolute bottom-3 left-3 text-xs font-semibold tracking-wide text-foreground/90">#Building</div>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 mb-5">
-              <div className="rounded-xl bg-secondary/55 p-4 border border-border/70">
-                <p className="text-xs text-muted-foreground mb-1">Cash in</p>
-                <p className="font-display text-2xl font-bold">$164</p>
-              </div>
-              <div className="rounded-xl bg-secondary/55 p-4 border border-border/70">
-                <p className="text-xs text-muted-foreground mb-1">Goal mode</p>
-                <p className="font-display text-2xl font-bold">82%</p>
-              </div>
+            <div className="rounded-2xl border border-border/70 bg-background/60 px-4 py-4">
+              <p className="text-4xl font-display font-bold text-cyan">+$124.50</p>
+              <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground mt-1">Weekly profit</p>
             </div>
-
-            <div className="rounded-xl bg-secondary/45 border border-border/70 p-4 mb-4">
-              <div className="flex items-center justify-between mb-2">
-                <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">XP progress</p>
-                <p className="text-xs font-semibold text-cyan">760 / 1000 XP</p>
-              </div>
-              <div className="w-full h-2.5 rounded-full bg-secondary/70 overflow-hidden mb-2">
-                <div className="h-full w-[76%] bg-gradient-to-r from-cyan via-primary to-accent rounded-full" />
-              </div>
-              <p className="text-xs text-muted-foreground">Next unlock: Custom avatar drip pack</p>
-            </div>
-
-            <div className="w-full h-2 rounded-full bg-secondary/70 overflow-hidden mb-3">
-              <div className="h-full w-[82%] bg-gradient-to-r from-primary to-cyan rounded-full" />
-            </div>
-            <p className="text-xs text-muted-foreground">Sneaker drop fund: $492 of $600</p>
           </div>
         </div>
       </div>
