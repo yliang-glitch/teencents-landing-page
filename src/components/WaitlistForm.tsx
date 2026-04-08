@@ -30,12 +30,19 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
       });
 
       if (!response.ok) {
-        throw new Error("Failed to submit");
+        let errorMessage = "Failed to submit";
+        try {
+          const data = await response.json();
+          if (data?.error) errorMessage = String(data.error);
+        } catch {
+          // keep default message when response body isn't json
+        }
+        throw new Error(errorMessage);
       }
 
       setSubmitted(true);
-    } catch (error) {
-      setSubmitError("Could not submit right now. Please try again.");
+    } catch (error: any) {
+      setSubmitError(error?.message || "Could not submit right now. Please try again.");
     } finally {
       setSubmitting(false);
     }
