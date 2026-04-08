@@ -12,10 +12,33 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
   const [email, setEmail] = useState("");
   const [role, setRole] = useState<"teen" | "parent">("teen");
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) setSubmitted(true);
+    if (!email || submitting) return;
+
+    setSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, role }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit");
+      }
+
+      setSubmitted(true);
+    } catch (error) {
+      setSubmitError("Could not submit right now. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -66,14 +89,18 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
         />
         <button
           type="submit"
+          disabled={submitting}
           className={cn(
-            "w-full sm:w-auto rounded-xl bg-primary text-primary-foreground font-display font-bold hover:brightness-110 transition-all animate-pulse-glow cursor-pointer",
+            "w-full sm:w-auto rounded-xl bg-primary text-primary-foreground font-display font-bold hover:brightness-110 transition-all animate-pulse-glow cursor-pointer disabled:cursor-not-allowed disabled:opacity-70",
             compact ? "px-5 py-2.5 text-sm" : "px-8 py-3.5 text-base"
           )}
         >
-          {buttonText}
+          {submitting ? "Submitting..." : buttonText}
         </button>
       </form>
+      {submitError && (
+        <p className="mt-3 text-sm text-destructive text-center">{submitError}</p>
+      )}
     </div>
   );
 };
