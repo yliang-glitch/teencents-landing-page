@@ -22,7 +22,7 @@ const Footer = () => {
             <h4 className="font-display font-bold text-sm uppercase tracking-wider text-muted-foreground mb-4">Links</h4>
             <ul className="space-y-3">
               <li><a href="#" className="text-sm text-foreground/70 hover:text-primary transition-colors">About</a></li>
-              <li><a href="/TeenCents_Privacy_Policy.docx" target="_blank" rel="noopener noreferrer" className="text-sm text-foreground/70 hover:text-primary transition-colors">Privacy</a></li>
+              <li><a href="/TeenCents_Privacy_Policy.docx?v=1" target="_blank" rel="noopener noreferrer" className="text-sm text-foreground/70 hover:text-primary transition-colors">Privacy</a></li>
               <li><a href="#" className="text-sm text-foreground/70 hover:text-primary transition-colors">Terms</a></li>
               <li><a href="mailto:hello@teencents.ai" className="text-sm text-foreground/70 hover:text-primary transition-colors">Contact</a></li>
             </ul>
