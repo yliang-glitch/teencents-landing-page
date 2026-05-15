@@ -128,7 +128,7 @@ We may update this Privacy Policy from time to time. When we do:
 14. Contact Us
 If you have questions, concerns, or requests about this Privacy Policy or your data, please contact us:
 TeenCents Support
-Email: privacy@teencents.com
+Email: info@teencents.ai
 We aim to respond to all privacy-related requests within 5 business days.
 
 This privacy policy was last reviewed on May 15, 2026.`;
