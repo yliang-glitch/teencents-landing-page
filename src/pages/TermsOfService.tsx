@@ -172,7 +172,7 @@ We are not liable for any delay or failure to perform resulting from causes outs
 17. Contact Us
 If you have questions about these Terms or need to report a violation, please contact us:
 TeenCents Support
-Email: info@teencents.com
+Email: info@teencents.ai
 We aim to respond to all legal inquiries within 5 business days.
 
 These Terms of Service were last reviewed on May 15, 2026.`;

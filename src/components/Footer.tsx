@@ -24,7 +24,7 @@ const Footer = () => {
               <li><a href="#" className="text-sm text-foreground/70 hover:text-primary transition-colors">About</a></li>
               <li><a href="/privacy-policy" className="text-sm text-foreground/70 hover:text-primary transition-colors">Privacy</a></li>
               <li><a href="/terms" className="text-sm text-foreground/70 hover:text-primary transition-colors">Terms</a></li>
-              <li><a href="mailto:hello@teencents.ai" className="text-sm text-foreground/70 hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="mailto:info@teencents.ai" className="text-sm text-foreground/70 hover:text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
 
