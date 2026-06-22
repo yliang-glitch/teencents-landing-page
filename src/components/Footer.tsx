@@ -3,29 +3,29 @@ import WaitlistForm from "./WaitlistForm";
 
 const Footer = () => {
   return (
-    <footer id="about" className="border-t border-border bg-card/40 px-6 pb-8 pt-20 scroll-mt-24">
+    <footer id="about" className="px-6 pb-10 pt-6 scroll-mt-28">
       <div className="mx-auto max-w-6xl">
-        <div className="surface-card mb-12 rounded-[2rem] p-8 shadow-[0_22px_60px_rgba(63,104,142,0.08)] sm:p-10">
-          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div className="surface-card overflow-hidden rounded-[2rem] px-8 py-8 shadow-[0_22px_60px_rgba(63,104,142,0.08)] sm:px-10 sm:py-10">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div>
-              <p className="text-sm uppercase tracking-[0.22em] text-muted-foreground">Join the beta</p>
-              <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              <p className="font-display text-[2rem] font-bold uppercase leading-[0.95] tracking-[-0.03em] text-gradient-neon sm:text-[2.6rem]">
                 Ready to build your financial future?
-              </h2>
-              <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
+              </p>
+              <p className="mt-4 max-w-md text-lg leading-relaxed text-muted-foreground">
                 Join the waitlist and be the first to know when TeenCents launches.
               </p>
             </div>
 
             <div>
-              <WaitlistForm showToggle buttonText="Join beta" className="lg:mx-0" />
+              <WaitlistForm compact buttonText="Join the Beta" className="max-w-none lg:mx-0" />
+              <p className="mt-4 text-sm text-muted-foreground">No spam. Ever. We respect your inbox.</p>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
-            <a href="/" className="font-display text-2xl font-bold tracking-tight">
+            <a href="/" className="font-display text-2xl font-bold tracking-tight uppercase">
               <span className="text-gradient-neon">TeenCents</span>
             </a>
             <p className="mt-2 text-sm text-muted-foreground">teencents.ai</p>
