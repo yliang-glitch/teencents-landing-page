@@ -13,18 +13,17 @@ const HeroSection = () => {
       <div className="absolute inset-0 geo-grid opacity-[0.1]" />
       <div className="absolute left-[-10%] top-8 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute right-[-4%] top-20 h-[32rem] w-[32rem] rounded-full bg-gradient-to-br from-accent/14 via-primary/10 to-cyan/14 blur-3xl" />
-      <div className="absolute right-[10%] top-[24%] hidden h-80 w-80 rounded-full border border-primary/12 bg-gradient-to-br from-accent/8 to-cyan/8 lg:block" />
 
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="text-center lg:text-left">
-          <div className="inline-flex items-center gap-3 rounded-full border border-primary/18 bg-white/88 px-5 py-3 shadow-[0_12px_32px_rgba(63,104,142,0.08)] backdrop-blur-sm opacity-0 animate-fade-up">
-            <span className="text-sm text-accent">⚡</span>
-            <span className="text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-primary/18 bg-white/88 px-4 py-2.5 shadow-[0_12px_32px_rgba(63,104,142,0.08)] backdrop-blur-sm opacity-0 animate-fade-up">
+            <span className="text-xs text-accent">⚡</span>
+            <span className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-gradient-neon">
               The money app for teens
             </span>
           </div>
 
-          <h1 className="mt-8 font-display text-[3.25rem] font-bold uppercase leading-[0.92] tracking-[-0.04em] text-foreground opacity-0 animate-fade-up-delay-1 sm:text-[4.4rem] lg:text-[5.7rem]">
+          <h1 className="mt-8 font-display text-[2.7rem] font-bold uppercase leading-[0.94] tracking-[-0.035em] text-foreground opacity-0 animate-fade-up-delay-1 sm:text-[3.6rem] lg:text-[4.6rem]">
             Your first
             <span className="mt-3 block bg-gradient-to-r from-accent via-primary to-cyan bg-clip-text text-transparent">
               $1,000
@@ -75,8 +74,8 @@ const HeroSection = () => {
         </div>
 
         <div className="relative opacity-0 animate-fade-up-delay-2">
-          <div className="absolute inset-x-12 top-16 h-[24rem] rounded-full bg-gradient-to-br from-accent/18 via-primary/10 to-cyan/16 blur-3xl" />
-          <div className="relative mx-auto max-w-[22rem] rounded-[3rem] border border-border/70 bg-white/88 p-3 shadow-[0_36px_90px_rgba(63,104,142,0.16)] backdrop-blur-xl">
+          <div className="absolute inset-x-10 top-16 h-[25.5rem] rounded-full bg-gradient-to-br from-accent/18 via-primary/10 to-cyan/16 blur-3xl" />
+          <div className="relative mx-auto max-w-[24.5rem] rounded-[3rem] border border-border/70 bg-white/88 p-3 shadow-[0_36px_90px_rgba(63,104,142,0.16)] backdrop-blur-xl">
             <div className="rounded-[2.6rem] border border-border/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.99),rgba(243,248,255,0.96))] px-5 pb-5 pt-4 shadow-inner">
               <div className="mx-auto mb-5 h-1.5 w-24 rounded-full bg-foreground/10" />
 
