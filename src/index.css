@@ -6,71 +6,71 @@
 
 @layer base {
   :root {
-    --background: 222 64% 98.4%;
-    --foreground: 227 45% 26%;
+    --background: 210 45% 98.8%;
+    --foreground: 226 34% 22%;
 
     --card: 0 0% 100%;
-    --card-foreground: 227 45% 26%;
+    --card-foreground: 226 34% 22%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 227 45% 26%;
+    --popover-foreground: 226 34% 22%;
 
-    --primary: 193 83% 54%;
-    --primary-foreground: 227 45% 20%;
+    --primary: 195 83% 57%;
+    --primary-foreground: 220 38% 18%;
 
-    --secondary: 228 40% 95%;
-    --secondary-foreground: 227 38% 30%;
+    --secondary: 210 35% 95.5%;
+    --secondary-foreground: 225 24% 34%;
 
-    --muted: 228 40% 95%;
-    --muted-foreground: 227 24% 52%;
+    --muted: 210 35% 95.5%;
+    --muted-foreground: 223 16% 50%;
 
-    --accent: 319 72% 64%;
-    --accent-foreground: 227 45% 20%;
+    --accent: 252 74% 72%;
+    --accent-foreground: 220 38% 18%;
 
-    --cyan: 161 72% 50%;
-    --cyan-foreground: 227 45% 20%;
+    --cyan: 166 70% 49%;
+    --cyan-foreground: 220 38% 18%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 225 36% 88%;
-    --input: 225 36% 88%;
-    --ring: 193 83% 54%;
+    --border: 214 30% 88%;
+    --input: 214 30% 88%;
+    --ring: 195 83% 57%;
 
     --radius: 1rem;
 
-    --glow-primary: 0 0 36px hsl(193 83% 54% / 0.2);
-    --glow-accent: 0 0 36px hsl(319 72% 64% / 0.2);
-    --glow-cyan: 0 0 36px hsl(161 72% 50% / 0.18);
+    --glow-primary: 0 0 36px hsl(195 83% 57% / 0.18);
+    --glow-accent: 0 0 36px hsl(252 74% 72% / 0.16);
+    --glow-cyan: 0 0 36px hsl(166 70% 49% / 0.16);
 
-    --bg-radial-1: 193 83% 54%;
-    --bg-radial-2: 319 72% 64%;
-    --bg-linear-1: 222 64% 98.4%;
-    --bg-linear-2: 226 58% 96%;
+    --bg-radial-1: 195 83% 57%;
+    --bg-radial-2: 252 74% 72%;
+    --bg-linear-1: 210 45% 98.8%;
+    --bg-linear-2: 210 38% 96.6%;
 
     --mesh-a: 0 0% 100%;
-    --mesh-b: 225 62% 96%;
-    --mesh-c: 193 83% 54%;
-    --mesh-d: 319 72% 64%;
+    --mesh-b: 210 48% 97%;
+    --mesh-c: 195 83% 57%;
+    --mesh-d: 166 70% 49%;
 
     --surface-a: 0 0% 100%;
-    --surface-b: 227 48% 97%;
-    --geo-a: 193 83% 54%;
-    --geo-b: 319 72% 64%;
-    --geo-c: 161 72% 50%;
-    --grid-line: 225 36% 88%;
+    --surface-b: 210 35% 97%;
+    --geo-a: 195 83% 57%;
+    --geo-b: 252 74% 72%;
+    --geo-c: 166 70% 49%;
+    --grid-line: 214 30% 88%;
 
     --font-display: "Sora", sans-serif;
     --font-body: "Manrope", sans-serif;
 
-    --sidebar-background: 222 64% 98.4%;
-    --sidebar-foreground: 227 45% 26%;
-    --sidebar-primary: 193 83% 54%;
-    --sidebar-primary-foreground: 227 45% 20%;
-    --sidebar-accent: 228 40% 95%;
-    --sidebar-accent-foreground: 227 45% 26%;
-    --sidebar-border: 225 36% 88%;
-    --sidebar-ring: 193 83% 54%;
+    --sidebar-background: 210 45% 98.8%;
+    --sidebar-foreground: 226 34% 22%;
+    --sidebar-primary: 195 83% 57%;
+    --sidebar-primary-foreground: 220 38% 18%;
+    --sidebar-accent: 210 35% 95.5%;
+    --sidebar-accent-foreground: 226 34% 22%;
+    --sidebar-border: 214 30% 88%;
+    --sidebar-ring: 195 83% 57%;
   }
 
   .dark {
@@ -142,8 +142,9 @@
     @apply bg-background text-foreground;
     font-family: var(--font-body);
     background-image:
-      radial-gradient(circle at 12% -10%, hsl(var(--bg-radial-1) / 0.16), transparent 40%),
-      radial-gradient(circle at 100% 8%, hsl(var(--bg-radial-2) / 0.14), transparent 35%),
+      radial-gradient(circle at 12% -10%, hsl(var(--bg-radial-1) / 0.15), transparent 40%),
+      radial-gradient(circle at 100% 8%, hsl(var(--bg-radial-2) / 0.12), transparent 35%),
+      radial-gradient(circle at 80% 70%, hsl(var(--geo-c) / 0.08), transparent 30%),
       linear-gradient(160deg, hsl(var(--bg-linear-1)) 0%, hsl(var(--bg-linear-2)) 100%);
     background-attachment: fixed;
     transition: background-color 250ms ease, color 250ms ease;
@@ -178,15 +179,15 @@
   }
   .mesh-panel {
     background:
-      linear-gradient(130deg, hsl(var(--mesh-a) / 0.84), hsl(var(--mesh-b) / 0.92)),
-      radial-gradient(circle at 18% 12%, hsl(var(--mesh-c) / 0.16), transparent 38%),
-      radial-gradient(circle at 86% 82%, hsl(var(--mesh-d) / 0.14), transparent 44%);
-    border: 1px solid hsl(var(--border) / 0.65);
-    backdrop-filter: blur(14px);
+      linear-gradient(130deg, hsl(var(--mesh-a) / 0.92), hsl(var(--mesh-b) / 0.96)),
+      radial-gradient(circle at 18% 12%, hsl(var(--mesh-c) / 0.12), transparent 38%),
+      radial-gradient(circle at 86% 82%, hsl(var(--mesh-d) / 0.1), transparent 44%);
+    border: 1px solid hsl(var(--border) / 0.75);
+    backdrop-filter: blur(16px);
   }
   .surface-card {
-    background: linear-gradient(150deg, hsl(var(--surface-a) / 0.92), hsl(var(--surface-b) / 0.92));
-    border: 1px solid hsl(var(--border) / 0.72);
+    background: linear-gradient(150deg, hsl(var(--surface-a) / 0.96), hsl(var(--surface-b) / 0.98));
+    border: 1px solid hsl(var(--border) / 0.78);
   }
   .section-divider {
     background: linear-gradient(90deg, transparent, hsl(var(--border) / 0.8), transparent);
@@ -194,12 +195,11 @@
   }
 }
 
-/* Geometric background pattern */
 .geo-pattern {
   background-image:
-    radial-gradient(circle at 18% 30%, hsl(var(--geo-a) / 0.1) 0%, transparent 45%),
-    radial-gradient(circle at 84% 22%, hsl(var(--geo-b) / 0.08) 0%, transparent 42%),
-    radial-gradient(circle at 72% 86%, hsl(var(--geo-c) / 0.06) 0%, transparent 44%);
+    radial-gradient(circle at 18% 30%, hsl(var(--geo-a) / 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 84% 22%, hsl(var(--geo-b) / 0.07) 0%, transparent 42%),
+    radial-gradient(circle at 72% 86%, hsl(var(--geo-c) / 0.07) 0%, transparent 44%);
 }
 
 .geo-grid {
