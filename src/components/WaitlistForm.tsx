@@ -50,8 +50,8 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
 
   if (submitted) {
     return (
-      <div className={cn("inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-primary/30 bg-primary/10 backdrop-blur-sm", className)}>
-        <span className="text-primary font-semibold">🎉 You're on the list!</span>
+      <div className={cn("inline-flex items-center gap-2 rounded-2xl border border-cyan/20 bg-white/90 px-6 py-3.5 shadow-[0_14px_35px_rgba(63,104,142,0.08)] backdrop-blur-sm", className)}>
+        <span className="font-semibold text-cyan">🎉 You're on the list!</span>
       </div>
     );
   }
@@ -59,13 +59,15 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
   return (
     <div className={cn("w-full", className)}>
       {showToggle && (
-        <div className="flex items-center justify-center gap-1 mb-4 p-1 rounded-xl bg-secondary/60 border border-border max-w-[220px] mx-auto">
+        <div className="mb-4 flex max-w-[220px] items-center justify-center gap-1 rounded-2xl border border-border/80 bg-white/85 p-1 shadow-[0_10px_25px_rgba(63,104,142,0.06)] mx-auto">
           <button
             type="button"
             onClick={() => setRole("teen")}
             className={cn(
-              "px-4 py-1.5 rounded-lg text-sm font-medium transition-all cursor-pointer",
-              role === "teen" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"
+              "cursor-pointer rounded-xl px-4 py-1.5 text-sm font-medium transition-all",
+              role === "teen"
+                ? "bg-gradient-to-r from-cyan to-primary text-white shadow-[0_10px_20px_rgba(63,104,142,0.12)]"
+                : "text-muted-foreground hover:text-foreground"
             )}
           >
             I'm a teen
@@ -74,15 +76,17 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
             type="button"
             onClick={() => setRole("parent")}
             className={cn(
-              "px-4 py-1.5 rounded-lg text-sm font-medium transition-all cursor-pointer",
-              role === "parent" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"
+              "cursor-pointer rounded-xl px-4 py-1.5 text-sm font-medium transition-all",
+              role === "parent"
+                ? "bg-gradient-to-r from-cyan to-primary text-white shadow-[0_10px_20px_rgba(63,104,142,0.12)]"
+                : "text-muted-foreground hover:text-foreground"
             )}
           >
             I'm a parent
           </button>
         </div>
       )}
-      <form onSubmit={handleSubmit} className={cn("flex flex-col sm:flex-row items-center justify-center gap-3", compact ? "max-w-sm" : "max-w-md", "mx-auto")}>
+      <form onSubmit={handleSubmit} className={cn("mx-auto flex flex-col items-center justify-center gap-3 sm:flex-row", compact ? "max-w-sm" : "max-w-md")}>
         <input
           type="email"
           value={email}
@@ -90,7 +94,7 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
           placeholder="your@email.com"
           required
           className={cn(
-            "w-full sm:flex-1 rounded-xl bg-secondary/80 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-body",
+            "w-full rounded-2xl border border-border/80 bg-white/90 text-foreground shadow-[0_12px_30px_rgba(63,104,142,0.06)] placeholder:text-muted-foreground transition-all focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/40 sm:flex-1 font-body",
             compact ? "px-4 py-2.5 text-sm" : "px-5 py-3.5"
           )}
         />
@@ -98,7 +102,7 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
           type="submit"
           disabled={submitting}
           className={cn(
-            "w-full sm:w-auto rounded-xl bg-primary text-primary-foreground font-display font-bold hover:brightness-110 transition-all animate-pulse-glow cursor-pointer disabled:cursor-not-allowed disabled:opacity-70",
+            "w-full rounded-2xl bg-gradient-to-r from-cyan to-primary font-display font-bold text-white shadow-[0_18px_35px_rgba(63,104,142,0.16)] transition-all hover:-translate-y-0.5 hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto",
             compact ? "px-5 py-2.5 text-sm" : "px-8 py-3.5 text-base"
           )}
         >
@@ -106,7 +110,7 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
         </button>
       </form>
       {submitError && (
-        <p className="mt-3 text-sm text-destructive text-center">{submitError}</p>
+        <p className="mt-3 text-center text-sm text-destructive">{submitError}</p>
       )}
     </div>
   );

@@ -3,70 +3,68 @@ import { Coins, PiggyBank, Sprout } from "lucide-react";
 const benefits = [
   {
     icon: Coins,
-    eyebrow: "Earn",
-    title: "See every hustle dollar clearly",
-    description: "Track money from jobs, reselling, tips, content, and side gigs without messy notes or spreadsheets.",
-    color: "text-cyan",
-    iconBg: "from-cyan/18 via-primary/16 to-white",
-    glow: "group-hover:shadow-[0_18px_48px_rgba(40,201,203,0.16)]",
+    title: "Earn",
+    description: "Track income from real jobs and side hustles. See your progress.",
   },
   {
     icon: PiggyBank,
-    eyebrow: "Save",
-    title: "Turn goals into visible progress",
-    description: "Build savings buckets for the stuff teens actually care about, then watch each deposit move the plan forward.",
-    color: "text-primary",
-    iconBg: "from-primary/18 via-cyan/12 to-white",
-    glow: "group-hover:shadow-[0_18px_48px_rgba(59,173,239,0.16)]",
+    title: "Save",
+    description: "Set goals that matter. Build habits and watch your money grow.",
   },
   {
     icon: Sprout,
-    eyebrow: "Grow",
-    title: "Build confidence while you learn",
-    description: "Use streaks, simple lessons, and AI guidance to build money habits early without it ever feeling heavy.",
-    color: "text-accent",
-    iconBg: "from-accent/16 via-primary/12 to-white",
-    glow: "group-hover:shadow-[0_18px_48px_rgba(175,138,255,0.16)]",
+    title: "Grow",
+    description: "Learn investing, budgeting, credit, and more with AI guidance.",
   },
 ];
 
 const BenefitsSection = () => {
   return (
-    <section className="relative py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-14 text-center max-w-3xl mx-auto">
-          <p className="text-sm uppercase tracking-[0.22em] text-muted-foreground mb-3">
-            Built for real life
-          </p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold">
-            A money app that helps teens <span className="text-gradient-neon">earn, save, and grow</span>
+    <section id="why-teencents" className="px-6 py-24 scroll-mt-24">
+      <div className="mx-auto max-w-6xl">
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <p className="text-sm uppercase tracking-[0.22em] text-muted-foreground">Why TeenCents</p>
+          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Money confidence built for real teen life
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            TeenCents keeps money progress visual and motivating so teens can track income, save with purpose, and learn by doing.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {benefits.map((b, i) => (
-            <div
-              key={b.title}
-              className={`group surface-card rounded-[1.75rem] p-8 transition-all duration-300 hover:-translate-y-1 ${b.glow}`}
-            >
-              <div className="flex items-center justify-between gap-4 mb-6">
-                <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                  {b.eyebrow}
-                </span>
-                <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground/80">
-                  0{i + 1}
-                </span>
+        <div className="surface-card overflow-hidden rounded-[2rem] shadow-[0_22px_60px_rgba(63,104,142,0.08)]">
+          <div className="grid divide-y divide-border/80 md:grid-cols-3 md:divide-x md:divide-y-0">
+            {benefits.map((benefit) => (
+              <div key={benefit.title} className="p-8 sm:p-10">
+                <div className="flex h-14 w-14 items-center justify-center rounded-[1.25rem] bg-gradient-to-br from-cyan/16 via-primary/14 to-white shadow-[0_14px_32px_rgba(63,104,142,0.08)]">
+                  <benefit.icon className="h-7 w-7 text-cyan" strokeWidth={1.8} />
+                </div>
+                <h3 className="mt-6 font-display text-2xl font-bold text-foreground">{benefit.title}</h3>
+                <p className="mt-3 max-w-sm text-base leading-relaxed text-muted-foreground">{benefit.description}</p>
               </div>
-              <div className={`w-[4.5rem] h-[4.5rem] rounded-[1.35rem] bg-gradient-to-br ${b.iconBg} border border-border/80 mb-5 flex items-center justify-center shadow-[0_16px_35px_rgba(63,104,142,0.1)]`}>
-                <b.icon className={`w-9 h-9 ${b.color}`} strokeWidth={1.9} />
+            ))}
+          </div>
+        </div>
+
+        <div className="mx-auto mt-10 max-w-3xl">
+          <div className="surface-card rounded-[1.75rem] p-7 shadow-[0_18px_50px_rgba(63,104,142,0.08)] sm:p-8">
+            <p className="text-lg leading-relaxed text-foreground">
+              “I saved <span className="font-semibold text-cyan">$1,200</span> teaching piano.”
+            </p>
+            <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="font-semibold text-foreground">Sophia, 16</p>
+                <p className="text-sm text-muted-foreground">Using TeenCents for 8 months</p>
               </div>
-              <h3 className="font-display text-2xl font-bold mb-3">{b.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{b.description}</p>
+              <div className="flex flex-wrap gap-3">
+                <div className="rounded-2xl bg-secondary/80 px-4 py-3">
+                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Saved</p>
+                  <p className="mt-1 font-display text-xl font-bold text-foreground">$1,200</p>
+                </div>
+                <div className="rounded-2xl bg-secondary/80 px-4 py-3">
+                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Goals achieved</p>
+                  <p className="mt-1 font-display text-xl font-bold text-foreground">7</p>
+                </div>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

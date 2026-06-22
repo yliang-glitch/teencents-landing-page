@@ -2,100 +2,93 @@ import WaitlistForm from "./WaitlistForm";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden geo-pattern pt-20">
-      <div className="absolute inset-0 geo-grid opacity-[0.22]" />
-      <div className="absolute -left-12 top-28 h-72 w-72 rounded-full bg-primary/14 blur-3xl pointer-events-none" />
-      <div className="absolute right-[-80px] top-16 h-96 w-96 rounded-full bg-cyan/16 blur-3xl pointer-events-none" />
-      <div className="absolute left-[28%] bottom-10 h-64 w-64 rounded-full bg-accent/10 blur-3xl pointer-events-none" />
+    <section className="relative overflow-hidden px-6 pb-24 pt-28 sm:pt-32">
+      <div className="absolute inset-0 geo-grid opacity-[0.12]" />
+      <div className="absolute left-[-120px] top-10 h-80 w-80 rounded-full bg-primary/12 blur-3xl" />
+      <div className="absolute right-[4%] top-20 h-[28rem] w-[28rem] rounded-full bg-gradient-to-br from-primary/14 via-accent/12 to-cyan/14 blur-3xl" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.02fr_0.98fr] gap-12 items-center">
+      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.02fr_0.98fr]">
         <div className="text-center lg:text-left">
-          <div className="opacity-0 animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/80 bg-white/85 backdrop-blur-sm mb-8 shadow-[0_10px_30px_rgba(63,104,142,0.08)]">
-            <span className="w-2 h-2 rounded-full bg-cyan animate-pulse" />
-            <span className="text-sm font-medium text-muted-foreground">
-              Built for hustle income, savings goals, and real momentum
-            </span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-white/80 px-4 py-2 text-sm font-medium text-muted-foreground shadow-[0_12px_32px_rgba(63,104,142,0.08)] backdrop-blur-sm opacity-0 animate-fade-up">
+            <span className="h-2 w-2 rounded-full bg-cyan" />
+            Built for teens, trusted by parents
           </div>
 
-          <h1 className="opacity-0 animate-fade-up-delay-1 font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight mb-6">
-            Your first <span className="text-gradient-neon">$1,000</span> starts here.
+          <h1 className="mt-7 font-display text-4xl font-bold leading-[1.02] tracking-tight text-foreground opacity-0 animate-fade-up-delay-1 sm:text-5xl md:text-6xl">
+            Your first <span className="bg-gradient-to-r from-primary via-accent to-cyan bg-clip-text text-transparent">$1,000</span> starts here.
           </h1>
 
-          <p className="opacity-0 animate-fade-up-delay-2 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground opacity-0 animate-fade-up-delay-2 sm:text-xl lg:mx-0">
             Track money from jobs and side hustles. Save for what matters. Get smart about money—early.
           </p>
 
-          <div className="opacity-0 animate-fade-up-delay-3">
-            <WaitlistForm showToggle />
-            <p className="mt-4 text-sm text-muted-foreground">
-              Early access is limited. Join the list before the next beta wave opens.
-            </p>
+          <div className="mt-10 opacity-0 animate-fade-up-delay-3">
+            <WaitlistForm showToggle className="lg:mx-0" />
+            <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+              <a
+                href="#features"
+                className="inline-flex min-h-11 items-center justify-center rounded-xl border border-border/80 bg-white/85 px-5 py-3 text-sm font-semibold text-foreground shadow-[0_12px_30px_rgba(63,104,142,0.08)] transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:text-primary"
+              >
+                See how it works
+              </a>
+              <p className="text-sm text-muted-foreground">Get launch updates, beta invites, and product news.</p>
+            </div>
           </div>
         </div>
 
-        <div className="opacity-0 animate-fade-up-delay-2 relative">
-          <div className="absolute -top-6 right-6 rounded-2xl border border-primary/15 bg-white/90 px-4 py-3 shadow-[0_18px_45px_rgba(63,104,142,0.12)] backdrop-blur-sm">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Weekly win</p>
-            <p className="mt-1 text-2xl font-display font-bold text-cyan">+$86.50</p>
-          </div>
+        <div className="relative opacity-0 animate-fade-up-delay-2">
+          <div className="absolute inset-x-10 top-12 h-[28rem] rounded-full bg-gradient-to-br from-primary/18 via-accent/12 to-cyan/16 blur-3xl" />
+          <div className="relative mx-auto max-w-[24rem] rounded-[2.8rem] border border-border/70 bg-white/88 p-3 shadow-[0_34px_80px_rgba(63,104,142,0.16)] backdrop-blur-xl">
+            <div className="rounded-[2.3rem] border border-border/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(242,248,255,0.96))] p-5 shadow-inner">
+              <div className="mx-auto mb-5 h-1.5 w-20 rounded-full bg-foreground/10" />
 
-          <div className="mesh-panel rounded-[2rem] p-5 sm:p-6 shadow-[0_28px_70px_rgba(63,104,142,0.14)]">
-            <div className="surface-card rounded-[1.75rem] p-6 sm:p-7">
-              <div className="flex items-start justify-between gap-4 mb-6">
+              <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground mb-2">Total tracked</p>
-                  <p className="font-display text-4xl sm:text-5xl font-bold leading-none">$1,248</p>
-                  <p className="text-xs text-cyan mt-2 font-semibold">+18% from last month</p>
+                  <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">TeenCents</p>
+                  <p className="mt-1 font-display text-3xl font-bold text-foreground">$387.50</p>
                 </div>
-                <div className="relative w-24 h-24 rounded-[32px] bg-gradient-to-br from-primary/20 via-cyan/20 to-accent/20 border border-border/80 flex items-center justify-center shadow-[0_18px_35px_rgba(63,104,142,0.12)]">
-                  <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-2xl shadow-inner">
-                    <span role="img" aria-label="teen avatar">
-                      🧠
-                    </span>
+                <div className="rounded-2xl bg-cyan/12 px-3 py-2 text-right">
+                  <p className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground">This month</p>
+                  <p className="mt-1 text-sm font-semibold text-cyan">+$84.20</p>
+                </div>
+              </div>
+
+              <div className="mt-5 rounded-[1.6rem] border border-border/70 bg-white/90 p-4 shadow-[0_18px_45px_rgba(63,104,142,0.08)]">
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Goal</p>
+                    <p className="mt-1 font-display text-xl font-bold text-foreground">MacBook Air</p>
                   </div>
-                  <div className="absolute -bottom-2 -right-2 px-2.5 py-1 rounded-full bg-cyan/90 text-cyan-foreground text-[10px] font-bold">
-                    XP 860
-                  </div>
+                  <div className="rounded-full bg-primary/12 px-3 py-1 text-sm font-semibold text-primary">67%</div>
+                </div>
+                <div className="mt-4 h-3 overflow-hidden rounded-full bg-secondary">
+                  <div className="h-full w-[67%] rounded-full bg-gradient-to-r from-primary via-accent to-cyan" />
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-3 mb-5">
-                <div className="rounded-2xl bg-white/80 p-4 border border-border/80">
-                  <p className="text-xs text-muted-foreground mb-1">Hustle income</p>
-                  <p className="font-display text-2xl font-bold">$164</p>
-                  <p className="mt-2 text-xs text-muted-foreground">Tips, sales, gigs</p>
+              <div className="mt-5 rounded-[1.6rem] border border-border/70 bg-white/90 p-4 shadow-[0_18px_45px_rgba(63,104,142,0.08)]">
+                <div className="mb-3 flex items-center justify-between">
+                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Recent activity</p>
+                  <p className="text-xs font-medium text-muted-foreground">Today</p>
                 </div>
-                <div className="rounded-2xl bg-white/80 p-4 border border-border/80">
-                  <p className="text-xs text-muted-foreground mb-1">Savings streak</p>
-                  <p className="font-display text-2xl font-bold">12 days</p>
-                  <p className="mt-2 text-xs text-muted-foreground">Momentum stays visible</p>
-                </div>
-              </div>
 
-              <div className="rounded-2xl bg-white/80 border border-border/80 p-4 mb-4">
-                <div className="flex items-center justify-between mb-2">
-                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Goal progress</p>
-                  <p className="text-xs font-semibold text-primary">$420 / $600</p>
-                </div>
-                <div className="w-full h-3 rounded-full bg-secondary/90 overflow-hidden mb-3">
-                  <div className="h-full w-[70%] bg-gradient-to-r from-primary via-cyan to-accent rounded-full" />
-                </div>
-                <div className="flex items-center justify-between text-xs text-muted-foreground">
-                  <span>New phone fund</span>
-                  <span>70% there</span>
-                </div>
-              </div>
-
-              <div className="grid sm:grid-cols-[1.15fr_0.85fr] gap-3">
-                <div className="rounded-2xl border border-border/80 bg-gradient-to-r from-primary/12 via-white to-cyan/14 p-4">
-                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground mb-2">AI guidance</p>
-                  <p className="font-semibold text-foreground">You are saving faster this week.</p>
-                  <p className="mt-1 text-sm text-muted-foreground">Move $15 from gigs to your phone goal to stay on pace.</p>
-                </div>
-                <div className="rounded-2xl border border-border/80 bg-gradient-to-br from-cyan/10 via-white to-accent/12 p-4">
-                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground mb-2">Level up</p>
-                  <p className="font-display text-3xl font-bold">7</p>
-                  <p className="mt-1 text-sm text-muted-foreground">Learn-by-doing keeps progress moving.</p>
+                <div className="space-y-3">
+                  {[
+                    ["Babysitting", "+$60.00", "positive"],
+                    ["Dog Walking", "+$25.00", "positive"],
+                    ["Target", "-$23.40", "negative"],
+                    ["Ice Cream", "-$6.50", "negative"],
+                  ].map(([label, amount, tone]) => (
+                    <div key={label} className="flex items-center justify-between rounded-2xl bg-secondary/70 px-4 py-3">
+                      <div>
+                        <p className="font-medium text-foreground">{label}</p>
+                        <p className="text-sm text-muted-foreground">Tracked instantly</p>
+                      </div>
+                      <p className={`text-sm font-semibold ${tone === "positive" ? "text-cyan" : "text-foreground/75"}`}>
+                        {amount}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
