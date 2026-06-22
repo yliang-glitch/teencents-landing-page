@@ -60,7 +60,7 @@ const BenefitsSection = () => {
               </p>
               <div className="mt-5">
                 <p className="text-2xl font-semibold text-foreground">Sophia, 16</p>
-                <p className="mt-2 text-lg text-muted-foreground">Using TeenCents for 8 months</p>
+                <p className="mt-2 text-lg text-muted-foreground">Using TeenCents for 3 months</p>
               </div>
             </div>
 

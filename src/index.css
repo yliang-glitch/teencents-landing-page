@@ -72,66 +72,6 @@
     --sidebar-border: 220 26% 89%;
     --sidebar-ring: 195 88% 59%;
   }
-
-  .dark {
-    --background: 225 44.4% 7.1%;
-    --foreground: 205 60% 96%;
-
-    --card: 224 45.5% 12.9%;
-    --card-foreground: 205 60% 96%;
-
-    --popover: 224 45.5% 12.9%;
-    --popover-foreground: 205 60% 96%;
-
-    --primary: 190.1 100% 50%;
-    --primary-foreground: 203 56% 8%;
-
-    --secondary: 207 34% 17%;
-    --secondary-foreground: 205 55% 91%;
-
-    --muted: 207 34% 17%;
-    --muted-foreground: 208 22% 66%;
-
-    --accent: 320 100% 50%;
-    --accent-foreground: 203 56% 8%;
-
-    --cyan: 157.4 100% 50%;
-    --cyan-foreground: 203 56% 8%;
-
-    --border: 207 28% 24%;
-    --input: 207 28% 24%;
-    --ring: 190.1 100% 50%;
-
-    --glow-primary: 0 0 40px hsl(190.1 100% 50% / 0.28);
-    --glow-accent: 0 0 40px hsl(320 100% 50% / 0.26);
-    --glow-cyan: 0 0 40px hsl(157.4 100% 50% / 0.28);
-
-    --bg-radial-1: 190.1 100% 50%;
-    --bg-radial-2: 320 100% 50%;
-    --bg-linear-1: 225 44.4% 7.1%;
-    --bg-linear-2: 224 45.5% 12.9%;
-
-    --mesh-a: 224 45.5% 14%;
-    --mesh-b: 224 45.5% 10%;
-    --mesh-c: 190.1 100% 50%;
-    --mesh-d: 320 100% 50%;
-
-    --surface-a: 224 45.5% 13%;
-    --surface-b: 224 45.5% 10.5%;
-    --geo-a: 190.1 100% 50%;
-    --geo-b: 320 100% 50%;
-    --geo-c: 157.4 100% 50%;
-    --grid-line: 207 28% 24%;
-
-    --sidebar-background: 225 44.4% 7.1%;
-    --sidebar-foreground: 205 60% 96%;
-    --sidebar-primary: 190.1 100% 50%;
-    --sidebar-primary-foreground: 203 56% 8%;
-    --sidebar-accent: 207 34% 17%;
-    --sidebar-accent-foreground: 205 60% 96%;
-    --sidebar-border: 207 28% 24%;
-    --sidebar-ring: 190.1 100% 50%;
-  }
 }
 
 @layer base {
@@ -141,6 +81,7 @@
 
   html {
     scroll-behavior: smooth;
+    color-scheme: light;
   }
 
   body {
