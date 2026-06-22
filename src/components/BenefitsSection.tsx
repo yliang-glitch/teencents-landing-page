@@ -44,19 +44,18 @@ const BenefitsSection = () => {
 
         <div className="mt-6 surface-card overflow-hidden rounded-[2rem] shadow-[0_22px_60px_rgba(63,104,142,0.08)]">
           <div className="grid gap-8 p-8 md:grid-cols-[0.95fr_1.1fr_0.7fr] md:items-center md:p-10">
-            <div className="relative mx-auto flex h-[16rem] w-full max-w-[13rem] items-end justify-center overflow-hidden rounded-[1.8rem] bg-[linear-gradient(180deg,rgba(214,227,255,0.95),rgba(239,229,255,0.95))] shadow-[0_18px_45px_rgba(63,104,142,0.1)]">
-              <div className="absolute inset-x-6 top-6 h-24 rounded-[1.5rem] border border-white/80 bg-gradient-to-br from-white/60 to-transparent" />
-              <div className="absolute inset-x-10 bottom-0 h-[13rem] rounded-t-[6rem] bg-[linear-gradient(180deg,rgba(51,65,85,0.08),rgba(99,102,241,0.16))]" />
-              <div className="absolute bottom-0 flex flex-col items-center">
-                <span className="text-7xl">😊</span>
-                <div className="-mt-3 h-20 w-32 rounded-t-[2rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.8),rgba(199,210,254,0.9))]" />
-              </div>
+            <div className="relative mx-auto h-[16rem] w-full max-w-[13rem] overflow-hidden rounded-[1.8rem] bg-[linear-gradient(180deg,rgba(214,227,255,0.95),rgba(239,229,255,0.95))] shadow-[0_18px_45px_rgba(63,104,142,0.1)]">
+              <img
+                src="/testimonial-sophia.png"
+                alt="Sophia using TeenCents"
+                className="h-full w-full object-cover"
+              />
             </div>
 
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">Real teen. Real progress.</p>
               <p className="mt-5 font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl">
-                “I saved $1,200 teaching piano.”
+                “I saved $600 teaching piano.”
               </p>
               <div className="mt-5">
                 <p className="text-2xl font-semibold text-foreground">Sophia, 16</p>
@@ -67,7 +66,7 @@ const BenefitsSection = () => {
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1">
               <div className="rounded-[1.5rem] bg-secondary/70 p-5">
                 <Sprout className="h-6 w-6 text-cyan" strokeWidth={1.8} />
-                <p className="mt-4 font-display text-4xl font-bold text-foreground">$1,200</p>
+                <p className="mt-4 font-display text-4xl font-bold text-foreground">$600</p>
                 <p className="mt-1 text-lg text-muted-foreground">Saved</p>
               </div>
               <div className="rounded-[1.5rem] bg-secondary/70 p-5">

@@ -69,8 +69,8 @@ const HowItWorksSection = () => {
 
             <div className="relative rounded-[1.8rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(244,247,255,0.96))] p-6 shadow-[0_18px_45px_rgba(63,104,142,0.08)]">
               <div className="absolute inset-y-0 right-0 w-28 rounded-r-[1.8rem] bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.08),transparent_70%)]" />
-              <div className="relative flex flex-col gap-5 sm:flex-row sm:items-end">
-                <div className="flex justify-center sm:w-40 lg:w-44">
+              <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-6">
+                <div className="flex flex-none justify-center">
                   <div className="rounded-[1.5rem] bg-white/92 p-2 shadow-[0_12px_30px_rgba(63,104,142,0.08)]">
                     <img
                       src="/ai-coach-bot.png"
