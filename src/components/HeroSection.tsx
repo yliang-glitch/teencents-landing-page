@@ -75,8 +75,8 @@ const HeroSection = () => {
         </div>
 
         <div className="relative opacity-0 animate-fade-up-delay-2">
-          <div className="absolute inset-x-14 top-16 h-[30rem] rounded-full bg-gradient-to-br from-accent/18 via-primary/10 to-cyan/16 blur-3xl" />
-          <div className="relative mx-auto max-w-[27rem] rotate-[5deg] rounded-[3rem] border border-border/70 bg-white/88 p-3 shadow-[0_36px_90px_rgba(63,104,142,0.16)] backdrop-blur-xl">
+          <div className="absolute inset-x-12 top-16 h-[24rem] rounded-full bg-gradient-to-br from-accent/18 via-primary/10 to-cyan/16 blur-3xl" />
+          <div className="relative mx-auto max-w-[22rem] rounded-[3rem] border border-border/70 bg-white/88 p-3 shadow-[0_36px_90px_rgba(63,104,142,0.16)] backdrop-blur-xl">
             <div className="rounded-[2.6rem] border border-border/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.99),rgba(243,248,255,0.96))] px-5 pb-5 pt-4 shadow-inner">
               <div className="mx-auto mb-5 h-1.5 w-24 rounded-full bg-foreground/10" />
 
