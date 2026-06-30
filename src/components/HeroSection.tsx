@@ -46,25 +46,14 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col items-center gap-4 text-left sm:flex-row sm:justify-center lg:justify-start opacity-0 animate-fade-up-delay-3">
-            <div className="flex -space-x-3">
-              {[
-                ["A", "from-pink-200 to-purple-200"],
-                ["J", "from-blue-200 to-cyan-200"],
-                ["M", "from-emerald-200 to-teal-200"],
-              ].map(([initial, colors], index) => (
-                <span
-                  key={initial}
-                  className={`flex h-12 w-12 items-center justify-center rounded-full border-4 border-background bg-gradient-to-br ${colors} text-sm font-bold text-foreground shadow-[0_10px_22px_rgba(63,104,142,0.08)]`}
-                  style={{ zIndex: 4 - index }}
-                >
-                  {initial}
-                </span>
-              ))}
+          <div className="mt-10 grid gap-4 text-left opacity-0 animate-fade-up-delay-3 sm:max-w-[34rem] sm:grid-cols-[auto_1fr] sm:items-start lg:max-w-[35rem]">
+            <div className="rounded-[1.35rem] border border-border/75 bg-white/88 px-4 py-3 shadow-[0_12px_28px_rgba(63,104,142,0.05)] backdrop-blur-sm">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Trusted early</p>
+              <p className="mt-2 font-display text-2xl font-bold tracking-[-0.04em] text-foreground">4.9/5</p>
             </div>
-            <div className="space-y-1 text-sm text-muted-foreground">
-              <p className="font-medium text-foreground/82">4.9 rating from 500+ teens</p>
-              <p>Built for babysitting, gigs, resale, and first big goals.</p>
+            <div className="space-y-2 border-l border-border/80 pl-4 text-sm text-muted-foreground">
+              <p className="font-medium text-foreground/82">Loved by 500+ teens starting with real money habits.</p>
+              <p>Built for babysitting, tutoring, resale, dog walking, and first big goals.</p>
             </div>
           </div>
         </div>
@@ -160,6 +149,16 @@ const HeroSection = () => {
                       <span>{label}</span>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-4 rounded-[1.35rem] border border-border/60 bg-secondary/45 px-4 py-3">
+                  <div className="flex items-center justify-between gap-4 text-sm">
+                    <div>
+                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Next milestone</p>
+                      <p className="mt-1 font-medium text-foreground">Concert tickets fund</p>
+                    </div>
+                    <p className="font-display text-xl font-bold text-primary">$72 left</p>
+                  </div>
                 </div>
               </div>
             </div>

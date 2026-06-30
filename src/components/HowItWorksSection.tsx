@@ -70,9 +70,10 @@ const HowItWorksSection = () => {
           </div>
         </div>
 
-        <div className="mt-8 grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
-          <div className="surface-card overflow-hidden rounded-[2rem] p-8 shadow-[0_20px_50px_rgba(63,104,142,0.06)] sm:p-10">
-            <div className="max-w-md">
+        <div className="mt-8 surface-card overflow-hidden rounded-[2rem] shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
+          <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
+            <div className="p-8 sm:p-10">
+              <div className="max-w-md">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">AI money coach</p>
               <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-foreground sm:text-[2.85rem]">
                 Questions about money?
@@ -82,11 +83,17 @@ const HowItWorksSection = () => {
               <p className="mt-5 text-lg leading-8 text-muted-foreground">
                 Get clear answers to help you make smart decisions with your money.
               </p>
+                <div className="mt-8 rounded-[1.35rem] border border-border/75 bg-secondary/45 px-5 py-4">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Good for</p>
+                  <p className="mt-2 text-sm leading-6 text-foreground/80">
+                    Paychecks, savings targets, spending choices, investing basics, and next-step money questions.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div className="surface-card overflow-hidden rounded-[2rem] p-6 shadow-[0_20px_50px_rgba(63,104,142,0.06)] sm:p-8">
-            <div className="grid gap-6 sm:grid-cols-[0.7fr_1.3fr] sm:items-center">
+            <div className="border-t border-border/70 p-6 sm:p-8 lg:border-l lg:border-t-0">
+              <div className="grid gap-6 sm:grid-cols-[0.72fr_1.28fr] sm:items-center">
               <div className="flex justify-center sm:justify-start">
                 <img
                   src="/ai-coach-bot.png"
@@ -94,20 +101,17 @@ const HowItWorksSection = () => {
                   className="h-52 w-52 object-contain sm:h-60 sm:w-60"
                 />
               </div>
-              <div className="space-y-4">
-                <div className="ml-auto max-w-[19rem] rounded-[1.5rem] bg-gradient-to-r from-accent to-primary px-5 py-4 text-base font-medium leading-relaxed text-white shadow-[0_14px_35px_rgba(99,102,241,0.14)]">
-                  How much should I save from my paycheck?
-                </div>
-                <div className="max-w-[21rem] rounded-[1.5rem] border border-border/70 bg-white px-5 py-4 text-base leading-relaxed text-foreground shadow-[0_12px_28px_rgba(63,104,142,0.05)]">
-                  A good rule is the 50/30/20 rule. Try saving 20% of what you earn for your future goals.
-                </div>
-                <div className="flex gap-2 px-1">
-                  {[0, 1, 2].map((dot) => (
-                    <span
-                      key={dot}
-                      className={`h-2.5 w-2.5 rounded-full ${dot === 1 ? "bg-accent" : "bg-primary/25"}`}
-                    />
-                  ))}
+                <div className="space-y-4">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Example conversation</p>
+                  <div className="ml-auto max-w-[19rem] rounded-[1.5rem] bg-gradient-to-r from-accent to-primary px-5 py-4 text-base font-medium leading-relaxed text-white shadow-[0_14px_35px_rgba(99,102,241,0.14)]">
+                    How much should I save from my paycheck?
+                  </div>
+                  <div className="max-w-[21rem] rounded-[1.5rem] border border-border/70 bg-white px-5 py-4 text-base leading-relaxed text-foreground shadow-[0_12px_28px_rgba(63,104,142,0.05)]">
+                    A good rule is the 50/30/20 rule. Try saving 20% of what you earn for your future goals.
+                  </div>
+                  <p className="text-sm leading-6 text-muted-foreground">
+                    Short answers first, with more context only when you want it.
+                  </p>
                 </div>
               </div>
             </div>

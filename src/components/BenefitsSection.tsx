@@ -52,8 +52,8 @@ const BenefitsSection = () => {
           </div>
         </div>
 
-        <div className="mt-8 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-stretch">
-          <div className="surface-card overflow-hidden rounded-[2rem] shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
+        <div className="mt-8 surface-card overflow-hidden rounded-[2rem] shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
+          <div className="grid gap-0 lg:grid-cols-[1.25fr_0.75fr]">
             <div className="grid h-full gap-0 sm:grid-cols-[0.88fr_1.12fr]">
               <div className="min-h-[19rem] bg-[linear-gradient(180deg,rgba(224,233,255,0.92),rgba(240,233,255,0.9))]">
                 <img
@@ -71,25 +71,31 @@ const BenefitsSection = () => {
                   <p className="text-2xl font-semibold text-foreground">Sophia, 16</p>
                   <p className="mt-2 text-base text-muted-foreground">Using TeenCents for 3 months</p>
                 </div>
+                <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground">
+                  She used TeenCents to keep piano income visible, split money between spending and savings, and stay motivated while working toward a bigger purchase.
+                </p>
               </div>
             </div>
-          </div>
+            <div className="border-t border-border/70 px-8 py-8 lg:border-l lg:border-t-0 sm:px-9">
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+                <div className="rounded-[1.6rem] bg-white/82 px-6 py-6 shadow-[0_14px_35px_rgba(63,104,142,0.05)]">
+                  <Sprout className="h-6 w-6 text-cyan" strokeWidth={1.8} />
+                  <p className="mt-8 font-display text-5xl font-bold tracking-[-0.05em] text-foreground">$600</p>
+                  <p className="mt-2 text-lg text-muted-foreground">Saved</p>
+                </div>
+                <div className="rounded-[1.6rem] bg-white/82 px-6 py-6 shadow-[0_14px_35px_rgba(63,104,142,0.05)]">
+                  <Calendar className="h-6 w-6 text-primary" strokeWidth={1.8} />
+                  <p className="mt-8 font-display text-5xl font-bold tracking-[-0.05em] text-foreground">7</p>
+                  <p className="mt-2 text-lg text-muted-foreground">Goals achieved</p>
+                </div>
+              </div>
 
-          <div className="grid gap-6 sm:grid-cols-2">
-            <div className="surface-card rounded-[2rem] p-7 shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
-              <Sprout className="h-6 w-6 text-cyan" strokeWidth={1.8} />
-              <p className="mt-10 font-display text-5xl font-bold tracking-[-0.05em] text-foreground">$600</p>
-              <p className="mt-2 text-lg text-muted-foreground">Saved</p>
-            </div>
-            <div className="surface-card rounded-[2rem] p-7 shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
-              <Calendar className="h-6 w-6 text-primary" strokeWidth={1.8} />
-              <p className="mt-10 font-display text-5xl font-bold tracking-[-0.05em] text-foreground">7</p>
-              <p className="mt-2 text-lg text-muted-foreground">Goals achieved</p>
-            </div>
-            <div className="surface-card rounded-[2rem] p-7 sm:col-span-2 shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
-              <p className="max-w-lg text-lg leading-8 text-muted-foreground">
-                From lessons to side hustles to first savings goals, TeenCents helps teens see money in motion and build confidence while they do it.
-              </p>
+              <div className="mt-6 border-t border-border/70 pt-6">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Why it matters</p>
+                <p className="mt-3 max-w-sm text-base leading-7 text-muted-foreground">
+                  TeenCents makes progress feel visible, so money lessons stick because they connect to real life.
+                </p>
+              </div>
             </div>
           </div>
         </div>
