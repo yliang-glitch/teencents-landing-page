@@ -6,74 +6,90 @@ const benefits = [
     title: "Earn",
     description: "Track income from real jobs and side hustles. See your progress.",
     color: "text-accent",
-    bg: "from-accent/14 via-primary/12 to-white",
   },
   {
     icon: PiggyBank,
     title: "Save",
     description: "Set goals that matter. Build habits and watch your money grow.",
     color: "text-cyan",
-    bg: "from-cyan/14 via-primary/12 to-white",
   },
   {
     icon: Sprout,
     title: "Grow",
     description: "Learn investing, budgeting, credit, and more with AI guidance.",
     color: "text-primary",
-    bg: "from-primary/14 via-accent/10 to-white",
   },
 ];
 
 const BenefitsSection = () => {
   return (
-    <section id="why-teencents" className="px-6 py-12 scroll-mt-28">
+    <section id="why-teencents" className="px-6 py-12 scroll-mt-28 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <div className="surface-card overflow-hidden rounded-[2rem] shadow-[0_22px_60px_rgba(63,104,142,0.08)]">
-          <div className="grid divide-y divide-border/80 md:grid-cols-3 md:divide-x md:divide-y-0">
-            {benefits.map((benefit) => (
-              <div key={benefit.title} className="p-8 md:p-10">
-                <div className={`flex h-14 w-14 items-center justify-center rounded-[1.3rem] bg-gradient-to-br ${benefit.bg} shadow-[0_14px_32px_rgba(63,104,142,0.08)]`}>
-                  <benefit.icon className={`h-7 w-7 ${benefit.color}`} strokeWidth={1.9} />
+        <div className="surface-card overflow-hidden rounded-[2rem] shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
+          <div className="grid gap-8 p-8 md:grid-cols-[0.5fr_1.5fr] md:items-start md:p-10">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">Why TeenCents</p>
+              <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-foreground sm:text-[2.7rem]">
+                Money habits that feel clear, calm, and real.
+              </h2>
+            </div>
+
+            <div className="grid gap-8 border-border/70 md:grid-cols-3 md:divide-x md:divide-border/70">
+              {benefits.map((benefit) => (
+                <div key={benefit.title} className="md:px-7 first:md:pl-0 last:md:pr-0">
+                  <div className="flex items-center gap-4">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary/80">
+                      <benefit.icon className={`h-6 w-6 ${benefit.color}`} strokeWidth={1.8} />
+                    </span>
+                    <h3 className={`font-display text-[1.8rem] font-bold ${benefit.color}`}>{benefit.title}</h3>
+                  </div>
+                  <p className="mt-4 max-w-xs text-base leading-7 text-muted-foreground">
+                    {benefit.description}
+                  </p>
                 </div>
-                <h3 className={`mt-6 font-display text-3xl font-bold ${benefit.color}`}>{benefit.title}</h3>
-                <p className="mt-3 max-w-sm text-lg leading-relaxed text-muted-foreground">{benefit.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="mt-6 surface-card overflow-hidden rounded-[2rem] shadow-[0_22px_60px_rgba(63,104,142,0.08)]">
-          <div className="grid gap-8 p-8 md:grid-cols-[0.95fr_1.1fr_0.7fr] md:items-center md:p-10">
-            <div className="relative mx-auto h-[16rem] w-full max-w-[13rem] overflow-hidden rounded-[1.8rem] bg-[linear-gradient(180deg,rgba(214,227,255,0.95),rgba(239,229,255,0.95))] shadow-[0_18px_45px_rgba(63,104,142,0.1)]">
-              <img
-                src="/testimonial-sophia.png"
-                alt="Sophia using TeenCents"
-                className="h-full w-full object-cover"
-              />
+        <div className="mt-8 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-stretch">
+          <div className="surface-card overflow-hidden rounded-[2rem] shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
+            <div className="grid h-full gap-0 sm:grid-cols-[0.88fr_1.12fr]">
+              <div className="min-h-[19rem] bg-[linear-gradient(180deg,rgba(224,233,255,0.92),rgba(240,233,255,0.9))]">
+                <img
+                  src="/testimonial-sophia.png"
+                  alt="Sophia using TeenCents"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="flex flex-col justify-center p-8 sm:p-9">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">Real teen. Real progress.</p>
+                <p className="mt-5 font-display text-[2.35rem] font-bold leading-[1.02] text-foreground sm:text-[2.9rem]">
+                  “I saved $600 teaching piano.”
+                </p>
+                <div className="mt-6 border-l border-border/80 pl-4">
+                  <p className="text-2xl font-semibold text-foreground">Sophia, 16</p>
+                  <p className="mt-2 text-base text-muted-foreground">Using TeenCents for 3 months</p>
+                </div>
+              </div>
             </div>
+          </div>
 
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">Real teen. Real progress.</p>
-              <p className="mt-5 font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl">
-                “I saved $600 teaching piano.”
+          <div className="grid gap-6 sm:grid-cols-2">
+            <div className="surface-card rounded-[2rem] p-7 shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
+              <Sprout className="h-6 w-6 text-cyan" strokeWidth={1.8} />
+              <p className="mt-10 font-display text-5xl font-bold tracking-[-0.05em] text-foreground">$600</p>
+              <p className="mt-2 text-lg text-muted-foreground">Saved</p>
+            </div>
+            <div className="surface-card rounded-[2rem] p-7 shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
+              <Calendar className="h-6 w-6 text-primary" strokeWidth={1.8} />
+              <p className="mt-10 font-display text-5xl font-bold tracking-[-0.05em] text-foreground">7</p>
+              <p className="mt-2 text-lg text-muted-foreground">Goals achieved</p>
+            </div>
+            <div className="surface-card rounded-[2rem] p-7 sm:col-span-2 shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
+              <p className="max-w-lg text-lg leading-8 text-muted-foreground">
+                From lessons to side hustles to first savings goals, TeenCents helps teens see money in motion and build confidence while they do it.
               </p>
-              <div className="mt-5">
-                <p className="text-2xl font-semibold text-foreground">Sophia, 16</p>
-                <p className="mt-2 text-lg text-muted-foreground">Using TeenCents for 3 months</p>
-              </div>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1">
-              <div className="rounded-[1.5rem] bg-secondary/70 p-5">
-                <Sprout className="h-6 w-6 text-cyan" strokeWidth={1.8} />
-                <p className="mt-4 font-display text-4xl font-bold text-foreground">$600</p>
-                <p className="mt-1 text-lg text-muted-foreground">Saved</p>
-              </div>
-              <div className="rounded-[1.5rem] bg-secondary/70 p-5">
-                <Calendar className="h-6 w-6 text-primary" strokeWidth={1.8} />
-                <p className="mt-4 font-display text-4xl font-bold text-foreground">7</p>
-                <p className="mt-1 text-lg text-muted-foreground">Goals achieved</p>
-              </div>
             </div>
           </div>
         </div>

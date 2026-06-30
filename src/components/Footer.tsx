@@ -3,12 +3,13 @@ import WaitlistForm from "./WaitlistForm";
 
 const Footer = () => {
   return (
-    <footer id="about" className="px-6 pb-10 pt-6 scroll-mt-28">
+    <footer id="about" className="px-6 pb-10 pt-8 scroll-mt-28 sm:pt-12">
       <div className="mx-auto max-w-6xl">
-        <div className="surface-card overflow-hidden rounded-[2rem] px-8 py-8 shadow-[0_22px_60px_rgba(63,104,142,0.08)] sm:px-10 sm:py-10">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+        <div className="surface-card overflow-hidden rounded-[2rem] px-8 py-8 shadow-[0_20px_50px_rgba(63,104,142,0.06)] sm:px-10 sm:py-10">
+          <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
             <div>
-              <p className="font-display text-[2rem] font-bold uppercase leading-[0.95] tracking-[-0.03em] text-gradient-neon sm:text-[2.6rem]">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">Join the waitlist</p>
+              <p className="mt-4 font-display text-[2.15rem] font-bold leading-[0.98] tracking-[-0.04em] text-foreground sm:text-[2.75rem]">
                 Ready to build your financial future?
               </p>
               <p className="mt-4 max-w-md text-lg leading-relaxed text-muted-foreground">
