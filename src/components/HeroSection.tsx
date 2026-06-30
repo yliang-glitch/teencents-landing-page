@@ -1,10 +1,63 @@
+import {
+  Bell,
+  BookOpen,
+  HandCoins,
+  House,
+  IceCreamCone,
+  Monitor,
+  PawPrint,
+  ShoppingBag,
+  Target,
+  UserRound,
+  Wallet,
+} from "lucide-react";
 import WaitlistForm from "./WaitlistForm";
 
 const recentActivity = [
-  { label: "Babysitting", date: "May 14", amount: "+$60.00", positive: true, icon: "🙂" },
-  { label: "Dog Walking", date: "May 12", amount: "+$25.00", positive: true, icon: "🐶" },
-  { label: "Target", date: "May 10", amount: "-$23.40", positive: false, icon: "🎯" },
-  { label: "Ice Cream", date: "May 9", amount: "-$6.50", positive: false, icon: "🍦" },
+  {
+    label: "Babysitting",
+    date: "May 14",
+    amount: "+$60.00",
+    positive: true,
+    icon: HandCoins,
+    iconClassName: "text-primary",
+    bgClassName: "from-primary/14 to-cyan/14",
+  },
+  {
+    label: "Dog Walking",
+    date: "May 12",
+    amount: "+$25.00",
+    positive: true,
+    icon: PawPrint,
+    iconClassName: "text-cyan",
+    bgClassName: "from-cyan/14 to-emerald-100",
+  },
+  {
+    label: "Target",
+    date: "May 10",
+    amount: "-$23.40",
+    positive: false,
+    icon: ShoppingBag,
+    iconClassName: "text-accent",
+    bgClassName: "from-accent/14 to-primary/10",
+  },
+  {
+    label: "Ice Cream",
+    date: "May 9",
+    amount: "-$6.50",
+    positive: false,
+    icon: IceCreamCone,
+    iconClassName: "text-amber-500",
+    bgClassName: "from-amber-100 to-pink-100",
+  },
+];
+
+const navItems = [
+  { label: "Home", icon: House, active: true },
+  { label: "Goals", icon: Target, active: false },
+  { label: "Earn", icon: Wallet, active: false },
+  { label: "Learn", icon: BookOpen, active: false },
+  { label: "Profile", icon: UserRound, active: false },
 ];
 
 const HeroSection = () => {
@@ -68,15 +121,15 @@ const HeroSection = () => {
 
                 <div className="mb-5 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-accent/25 via-primary/16 to-cyan/25 text-lg shadow-sm">
-                      🧑🏽
+                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-accent/25 via-primary/16 to-cyan/25 shadow-sm">
+                      <UserRound className="h-5 w-5 text-foreground/75" strokeWidth={2} />
                     </span>
                     <div>
-                      <p className="font-semibold text-foreground">Hey, Alex! 👋</p>
+                      <p className="font-semibold text-foreground">Hey, Alex!</p>
                       <p className="text-sm text-muted-foreground">Let's build your future.</p>
                     </div>
                   </div>
-                  <span className="h-4 w-4 rounded-full border border-foreground/25" />
+                  <Bell className="h-4 w-4 text-foreground/35" strokeWidth={2} />
                 </div>
 
                 <div className="space-y-4">
@@ -97,7 +150,9 @@ const HeroSection = () => {
                         <p className="text-[0.72rem] uppercase tracking-[0.2em] text-muted-foreground">Goal</p>
                         <p className="mt-2 font-display text-[2rem] font-bold text-foreground">MacBook Air</p>
                       </div>
-                      <span className="text-3xl">💻</span>
+                      <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/12 to-accent/12">
+                        <Monitor className="h-6 w-6 text-primary" strokeWidth={1.9} />
+                      </span>
                     </div>
                     <div className="mt-4 flex items-center gap-3">
                       <div className="h-3 flex-1 overflow-hidden rounded-full bg-secondary">
@@ -116,11 +171,14 @@ const HeroSection = () => {
                     </div>
 
                     <div className="space-y-3">
-                      {recentActivity.map((item) => (
+                      {recentActivity.map((item) => {
+                        const Icon = item.icon;
+
+                        return (
                         <div key={item.label} className="flex items-center justify-between gap-3 rounded-2xl px-1 py-1">
                           <div className="flex items-center gap-3">
-                            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary/85 text-lg">
-                              {item.icon}
+                            <span className={`flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br ${item.bgClassName}`}>
+                              <Icon className={`h-4.5 w-4.5 ${item.iconClassName}`} strokeWidth={1.9} />
                             </span>
                             <div>
                               <p className="font-medium text-foreground">{item.label}</p>
@@ -131,24 +189,25 @@ const HeroSection = () => {
                             {item.amount}
                           </p>
                         </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-5 grid grid-cols-5 gap-2 rounded-[1.4rem] border border-border/70 bg-white/94 px-3 py-2 text-center text-[11px] text-muted-foreground">
-                  {[
-                    ["🏠", "Home"],
-                    ["🎯", "Goals"],
-                    ["💸", "Earn"],
-                    ["📚", "Learn"],
-                    ["👤", "Profile"],
-                  ].map(([icon, label]) => (
-                    <div key={label} className="flex flex-col items-center gap-1 rounded-xl py-2">
-                      <span className="text-base">{icon}</span>
-                      <span>{label}</span>
+                  {navItems.map((item) => {
+                    const Icon = item.icon;
+
+                    return (
+                    <div key={item.label} className="flex flex-col items-center gap-1 rounded-xl py-2">
+                      <span className={`flex h-6 w-6 items-center justify-center rounded-full ${item.active ? "text-accent" : "text-muted-foreground"}`}>
+                        <Icon className="h-4 w-4" strokeWidth={2} />
+                      </span>
+                      <span className={item.active ? "font-medium text-accent" : ""}>{item.label}</span>
                     </div>
-                  ))}
+                    );
+                  })}
                 </div>
 
                 <div className="mt-4 rounded-[1.35rem] border border-border/60 bg-secondary/45 px-4 py-3">
