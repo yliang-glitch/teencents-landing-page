@@ -70,8 +70,12 @@ const HeroSection = () => {
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
         <div className="text-center lg:text-left">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-white/88 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-gradient-neon shadow-[0_10px_24px_rgba(63,104,142,0.06)] backdrop-blur-sm opacity-0 animate-fade-up">
-            <span className="text-accent">⚡</span>
-            <span>The money app for teens</span>
+            <span className="brand-motif" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </span>
+            <span>Teen hustle money, organized</span>
           </div>
 
           <h1 className="mt-7 font-display text-[2.9rem] font-bold leading-[0.92] tracking-[-0.05em] text-foreground opacity-0 animate-fade-up-delay-1 sm:text-[4.35rem] lg:text-[5.2rem]">
@@ -81,7 +85,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground opacity-0 animate-fade-up-delay-2 sm:text-[1.34rem] lg:mx-0 lg:max-w-lg">
-            Track money from jobs and side hustles. Save for what matters. Get smart about money early.
+            Track babysitting, tutoring, resale, and first paychecks. Save for what matters next. Build money confidence before adulthood.
           </p>
 
           <div className="mt-9 opacity-0 animate-fade-up-delay-3">
@@ -106,7 +110,7 @@ const HeroSection = () => {
             </div>
             <div className="space-y-2 border-l border-border/80 pl-4 text-sm text-muted-foreground">
               <p className="font-medium text-foreground/82">Loved by 500+ teens starting with real money habits.</p>
-              <p>Built for babysitting, tutoring, resale, dog walking, and first big goals.</p>
+              <p>Built for babysitting, tutoring, resale, dog walking, and creator cash.</p>
             </div>
           </div>
         </div>
@@ -175,20 +179,20 @@ const HeroSection = () => {
                         const Icon = item.icon;
 
                         return (
-                        <div key={item.label} className="flex items-center justify-between gap-3 rounded-2xl px-1 py-1">
-                          <div className="flex items-center gap-3">
-                            <span className={`flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br ${item.bgClassName}`}>
-                              <Icon className={`h-4.5 w-4.5 ${item.iconClassName}`} strokeWidth={1.9} />
-                            </span>
-                            <div>
-                              <p className="font-medium text-foreground">{item.label}</p>
-                              <p className="text-sm text-muted-foreground">{item.date}</p>
+                          <div key={item.label} className="flex items-center justify-between gap-3 rounded-2xl px-1 py-1">
+                            <div className="flex items-center gap-3">
+                              <span className={`flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br ${item.bgClassName}`}>
+                                <Icon className={`h-4.5 w-4.5 ${item.iconClassName}`} strokeWidth={1.9} />
+                              </span>
+                              <div>
+                                <p className="font-medium text-foreground">{item.label}</p>
+                                <p className="text-sm text-muted-foreground">{item.date}</p>
+                              </div>
                             </div>
+                            <p className={`text-base font-semibold ${item.positive ? "text-cyan" : "text-red-500"}`}>
+                              {item.amount}
+                            </p>
                           </div>
-                          <p className={`text-base font-semibold ${item.positive ? "text-cyan" : "text-red-500"}`}>
-                            {item.amount}
-                          </p>
-                        </div>
                         );
                       })}
                     </div>
@@ -200,12 +204,12 @@ const HeroSection = () => {
                     const Icon = item.icon;
 
                     return (
-                    <div key={item.label} className="flex flex-col items-center gap-1 rounded-xl py-2">
-                      <span className={`flex h-6 w-6 items-center justify-center rounded-full ${item.active ? "text-accent" : "text-muted-foreground"}`}>
-                        <Icon className="h-4 w-4" strokeWidth={2} />
-                      </span>
-                      <span className={item.active ? "font-medium text-accent" : ""}>{item.label}</span>
-                    </div>
+                      <div key={item.label} className="flex flex-col items-center gap-1 rounded-xl py-2">
+                        <span className={`flex h-6 w-6 items-center justify-center rounded-full ${item.active ? "text-accent" : "text-muted-foreground"}`}>
+                          <Icon className="h-4 w-4" strokeWidth={2} />
+                        </span>
+                        <span className={item.active ? "font-medium text-accent" : ""}>{item.label}</span>
+                      </div>
                     );
                   })}
                 </div>

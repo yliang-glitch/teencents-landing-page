@@ -148,6 +148,31 @@
     background: linear-gradient(90deg, transparent, hsl(var(--border) / 0.82), transparent);
     height: 1px;
   }
+
+  .brand-motif {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .brand-motif span {
+    display: block;
+    height: 0.38rem;
+    border-radius: 999px;
+    background-image: linear-gradient(120deg, hsl(var(--accent)), hsl(var(--primary)), hsl(var(--cyan)));
+  }
+
+  .brand-motif span:nth-child(1) {
+    width: 0.4rem;
+  }
+
+  .brand-motif span:nth-child(2) {
+    width: 0.95rem;
+  }
+
+  .brand-motif span:nth-child(3) {
+    width: 0.6rem;
+  }
 }
 
 .geo-pattern {

@@ -28,9 +28,16 @@ const BenefitsSection = () => {
         <div className="surface-card overflow-hidden rounded-[2rem] shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
           <div className="grid gap-8 p-8 md:grid-cols-[0.5fr_1.5fr] md:items-start md:p-10">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">Why TeenCents</p>
+              <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">
+                <span className="brand-motif" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </span>
+                Why TeenCents
+              </p>
               <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-foreground sm:text-[2.7rem]">
-                Money habits that feel clear, calm, and real.
+                Built for hustle money, real goals, and smarter next moves.
               </h2>
             </div>
 
@@ -44,7 +51,9 @@ const BenefitsSection = () => {
                     <h3 className={`font-display text-[1.8rem] font-bold ${benefit.color}`}>{benefit.title}</h3>
                   </div>
                   <p className="mt-4 max-w-xs text-base leading-7 text-muted-foreground">
-                    {benefit.description}
+                    {benefit.title === "Earn" && "Capture babysitting, tutoring, resale, gigs, and first paychecks without a spreadsheet."}
+                    {benefit.title === "Save" && "Turn phone upgrades, concert tickets, trips, and first-car plans into goals you can actually see."}
+                    {benefit.title === "Grow" && "Learn budgeting, investing, credit, and better tradeoffs while your own money is in motion."}
                   </p>
                 </div>
               ))}
@@ -63,7 +72,14 @@ const BenefitsSection = () => {
                 />
               </div>
               <div className="flex flex-col justify-center p-8 sm:p-9">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">Real teen. Real progress.</p>
+                <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">
+                  <span className="brand-motif" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                  </span>
+                  Real teen. Real progress.
+                </p>
                 <p className="mt-5 font-display text-[2.35rem] font-bold leading-[1.02] text-foreground sm:text-[2.9rem]">
                   “I saved $600 teaching piano.”
                 </p>
@@ -72,7 +88,7 @@ const BenefitsSection = () => {
                   <p className="mt-2 text-base text-muted-foreground">Using TeenCents for 3 months</p>
                 </div>
                 <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground">
-                  She used TeenCents to keep piano income visible, split money between spending and savings, and stay motivated while working toward a bigger purchase.
+                  She used TeenCents to split piano money between spending and saving, keep her progress visible, and stay consistent while working toward a bigger goal.
                 </p>
               </div>
             </div>
@@ -93,7 +109,7 @@ const BenefitsSection = () => {
               <div className="mt-6 border-t border-border/70 pt-6">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Why it matters</p>
                 <p className="mt-3 max-w-sm text-base leading-7 text-muted-foreground">
-                  TeenCents makes progress feel visible, so money lessons stick because they connect to real life.
+                  TeenCents helps teens connect every hustle dollar to a real choice, so money lessons feel useful right away.
                 </p>
               </div>
             </div>

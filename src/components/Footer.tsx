@@ -8,12 +8,19 @@ const Footer = () => {
         <div className="surface-card overflow-hidden rounded-[2rem] px-8 py-8 shadow-[0_20px_50px_rgba(63,104,142,0.06)] sm:px-10 sm:py-10">
           <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">Join the waitlist</p>
+              <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">
+                <span className="brand-motif" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </span>
+                Join the waitlist
+              </p>
               <p className="mt-4 font-display text-[2.15rem] font-bold leading-[0.98] tracking-[-0.04em] text-foreground sm:text-[2.75rem]">
-                Ready to build your financial future?
+                Ready to stack your first $1,000?
               </p>
               <p className="mt-4 max-w-md text-lg leading-relaxed text-muted-foreground">
-                Join the waitlist and be the first to know when TeenCents launches.
+                Join the waitlist for the app that helps teens track hustle money, save toward real goals, and learn as they go.
               </p>
             </div>
 
@@ -31,7 +38,7 @@ const Footer = () => {
             </a>
             <p className="mt-2 text-sm text-muted-foreground">teencents.ai</p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Helping teens track hustle income, save with purpose, and build money confidence early.
+              Helping teens track hustle income, save for real goals, and build money confidence before adulthood.
             </p>
           </div>
 
