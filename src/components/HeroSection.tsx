@@ -75,7 +75,7 @@ const HeroSection = () => {
               <span />
               <span />
             </span>
-            <span>Teen hustle money, organized</span>
+            <span>The money app for teens</span>
           </div>
 
           <h1 className="mt-7 font-display text-[2.9rem] font-bold leading-[0.92] tracking-[-0.05em] text-foreground opacity-0 animate-fade-up-delay-1 sm:text-[4.35rem] lg:text-[5.2rem]">
