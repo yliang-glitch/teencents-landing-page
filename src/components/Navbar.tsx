@@ -9,9 +9,13 @@ const Navbar = () => {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 border-b border-border/60 bg-background/88 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
-        <a href="/" className="flex items-center gap-3">
-          <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-primary/18 bg-white shadow-[0_10px_24px_rgba(63,104,142,0.06)]">
-            <span className="bg-gradient-to-r from-primary via-accent to-cyan bg-clip-text font-display text-xl font-bold text-transparent">TC</span>
+        <a href="/" className="flex items-center gap-4">
+          <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl border border-primary/18 bg-white shadow-[0_10px_24px_rgba(63,104,142,0.06)]">
+            <img
+              src="/apple-touch-icon-180.png"
+              alt="TeenCents logo"
+              className="h-full w-full object-cover"
+            />
           </span>
           <span className="font-display text-xl font-bold uppercase tracking-[0.08em] text-foreground sm:text-2xl">
             TeenCents
