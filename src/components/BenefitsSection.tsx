@@ -83,7 +83,7 @@ const BenefitsSection = () => {
                     <span />
                     <span />
                   </span>
-                  Real teen. Real progress.
+                  Teen goal story
                 </p>
                 <p className="mt-5 font-display text-[2.35rem] font-bold leading-[1.02] text-foreground sm:text-[2.9rem]">
                   “I saved $600 teaching piano.”

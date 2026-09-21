@@ -1,4 +1,3 @@
-import { Instagram, Twitter } from "lucide-react";
 import WaitlistForm from "./WaitlistForm";
 
 const Footer = () => {
@@ -30,7 +29,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <WaitlistForm compact buttonText="Join the Beta" className="max-w-none lg:mx-0" />
+              <WaitlistForm compact showToggle buttonText="Join the Beta" className="max-w-none lg:mx-0" />
               <p className="mt-4 text-sm text-muted-foreground">No spam. Ever. We respect your inbox.</p>
             </div>
           </div>
@@ -60,21 +59,11 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 font-display text-sm font-bold uppercase tracking-wider text-muted-foreground">Follow along</h4>
             <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
-              Launch updates, product news, and early TeenCents moments.
+              Launch updates, product news, and early TeenCents moments. Social channels are coming soon.
             </p>
-            <div className="flex items-center gap-4">
-              <a href="#" className="text-muted-foreground transition-colors hover:text-primary" aria-label="TikTok">
-                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
-                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.2 8.2 0 004.76 1.52V7.05a4.84 4.84 0 01-1-.36z" />
-                </svg>
-              </a>
-              <a href="#" className="text-muted-foreground transition-colors hover:text-primary" aria-label="Instagram">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground transition-colors hover:text-primary" aria-label="X">
-                <Twitter className="h-5 w-5" />
-              </a>
-            </div>
+            <a href="mailto:info@teencents.ai" className="inline-flex rounded-full border border-border/80 bg-white/70 px-4 py-2 text-sm font-semibold text-foreground/78 transition-colors hover:text-primary">
+              Email TeenCents
+            </a>
           </div>
         </div>
 

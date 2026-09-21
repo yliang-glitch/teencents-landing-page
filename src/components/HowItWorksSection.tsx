@@ -1,4 +1,4 @@
-import { BrainCircuit, ShieldCheck, Sparkles, Target, Wallet } from "lucide-react";
+import { BrainCircuit, Eye, GraduationCap, LockKeyhole, ShieldCheck, Sparkles, Target, Wallet } from "lucide-react";
 
 const steps = [
   {
@@ -28,10 +28,26 @@ const steps = [
 ];
 
 const trustItems = [
-  { label: "Privacy first", icon: ShieldCheck },
-  { label: "No gambling", icon: Target },
-  { label: "Educational AI", icon: Sparkles },
-  { label: "Parent informed", icon: BrainCircuit },
+  {
+    title: "Privacy first",
+    description: "Waitlist details stay simple. Privacy and terms are easy to find before families decide.",
+    icon: LockKeyhole,
+  },
+  {
+    title: "No gambling",
+    description: "TeenCents is built around habits, goals, and learning, not betting, hype, or quick-money promises.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Educational AI",
+    description: "Guidance is designed to explain choices in plain language, not pressure teens into decisions.",
+    icon: GraduationCap,
+  },
+  {
+    title: "Parent informed",
+    description: "Teens take the initiative while parents get clearer language, context, and transparency.",
+    icon: Eye,
+  },
 ];
 
 const HowItWorksSection = () => {
@@ -142,24 +158,42 @@ const HowItWorksSection = () => {
           </div>
         </div>
 
-        <div id="for-parents" className="mt-6 surface-card rounded-[2rem] px-6 py-6 shadow-[0_20px_50px_rgba(63,104,142,0.06)] scroll-mt-28 sm:px-8">
-          <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
-            <div className="flex items-center gap-4 lg:min-w-[19rem]">
-              <span className="flex h-14 w-14 items-center justify-center rounded-[1.25rem] bg-secondary/85">
-                <ShieldCheck className="h-7 w-7 text-primary" strokeWidth={1.8} />
-              </span>
-              <p className="font-display text-2xl font-bold leading-tight text-foreground">
-                Built for teens.
-                <br />
-                Trusted by parents.
+        <div id="for-parents" className="mt-6 surface-card rounded-[2rem] px-6 py-7 shadow-[0_20px_50px_rgba(63,104,142,0.06)] scroll-mt-28 sm:px-8 sm:py-8">
+          <div className="grid gap-7 lg:grid-cols-[0.74fr_1.26fr] lg:items-start">
+            <div>
+              <div className="flex items-center gap-4">
+                <span className="flex h-14 w-14 items-center justify-center rounded-[1.25rem] bg-secondary/85">
+                  <ShieldCheck className="h-7 w-7 text-primary" strokeWidth={1.8} />
+                </span>
+                <p className="font-display text-2xl font-bold leading-tight text-foreground">
+                  Built for teens.
+                  <br />
+                  Clear for parents.
+                </p>
+              </div>
+              <p className="mt-4 max-w-md text-base leading-7 text-muted-foreground">
+                TeenCents is designed for teen initiative with parent-friendly transparency around privacy, AI guidance, and learning goals.
               </p>
+              <div className="mt-5 flex flex-wrap gap-3 text-sm font-medium">
+                <a href="/privacy-policy" className="rounded-full border border-border/80 bg-white/80 px-4 py-2 text-foreground/78 transition-colors hover:text-primary">
+                  Read privacy
+                </a>
+                <a href="/terms" className="rounded-full border border-border/80 bg-white/80 px-4 py-2 text-foreground/78 transition-colors hover:text-primary">
+                  View terms
+                </a>
+              </div>
             </div>
 
-            <div className="grid flex-1 gap-4 sm:grid-cols-2 xl:grid-cols-4 xl:divide-x xl:divide-border/70 xl:gap-0">
+            <div className="grid gap-4 sm:grid-cols-2">
               {trustItems.map((item) => (
-                <div key={item.label} className="flex items-center gap-3 rounded-2xl px-4 py-2 xl:justify-center">
-                  <item.icon className="h-5 w-5 text-accent" strokeWidth={1.8} />
-                  <span className="text-sm font-medium text-foreground/82">{item.label}</span>
+                <div key={item.title} className="rounded-[1.35rem] bg-white/74 p-5 shadow-[0_14px_35px_rgba(63,104,142,0.045)]">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-secondary/85">
+                      <item.icon className="h-5 w-5 text-accent" strokeWidth={1.8} />
+                    </span>
+                    <h3 className="font-display text-lg font-bold text-foreground">{item.title}</h3>
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-muted-foreground">{item.description}</p>
                 </div>
               ))}
             </div>

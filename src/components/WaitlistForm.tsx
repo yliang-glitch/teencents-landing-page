@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface WaitlistFormProps {
@@ -9,6 +9,8 @@ interface WaitlistFormProps {
 }
 
 const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the waitlist", compact = false }: WaitlistFormProps) => {
+  const inputId = useId();
+  const errorId = useId();
   const [email, setEmail] = useState("");
   const [role, setRole] = useState<"teen" | "parent">("teen");
   const [submitted, setSubmitted] = useState(false);
@@ -30,19 +32,12 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
       });
 
       if (!response.ok) {
-        let errorMessage = "Failed to submit";
-        try {
-          const data = await response.json();
-          if (data?.error) errorMessage = String(data.error);
-        } catch {
-          // keep default message when response body isn't json
-        }
-        throw new Error(errorMessage);
+        throw new Error("Could not join right now. Please check your email and try again.");
       }
 
       setSubmitted(true);
-    } catch (error: any) {
-      setSubmitError(error?.message || "Could not submit right now. Please try again.");
+    } catch (error: unknown) {
+      setSubmitError(error instanceof Error ? error.message : "Could not join right now. Please try again.");
     } finally {
       setSubmitting(false);
     }
@@ -50,8 +45,12 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
 
   if (submitted) {
     return (
-      <div className={cn("inline-flex items-center gap-2 rounded-2xl border border-cyan/20 bg-white/90 px-6 py-3.5 shadow-[0_14px_35px_rgba(63,104,142,0.08)] backdrop-blur-sm", className)}>
-        <span className="font-semibold text-cyan">🎉 You're on the list!</span>
+      <div
+        className={cn("inline-flex items-center gap-2 rounded-2xl border border-cyan/20 bg-white/90 px-6 py-3.5 shadow-[0_14px_35px_rgba(63,104,142,0.08)] backdrop-blur-sm", className)}
+        role="status"
+        aria-live="polite"
+      >
+        <span className="font-semibold text-cyan">You're on the list.</span>
       </div>
     );
   }
@@ -59,10 +58,15 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
   return (
     <div className={cn("w-full", className)}>
       {showToggle && (
-        <div className="mb-4 flex max-w-[220px] items-center justify-center gap-1 rounded-2xl border border-border/80 bg-white/85 p-1 shadow-[0_10px_25px_rgba(63,104,142,0.06)] mx-auto">
+        <div
+          className="mx-auto mb-4 flex max-w-[230px] items-center justify-center gap-1 rounded-2xl border border-border/80 bg-white/85 p-1 shadow-[0_10px_25px_rgba(63,104,142,0.06)]"
+          role="group"
+          aria-label="Choose your waitlist role"
+        >
           <button
             type="button"
             onClick={() => setRole("teen")}
+            aria-pressed={role === "teen"}
             className={cn(
               "cursor-pointer rounded-xl px-4 py-1.5 text-sm font-medium transition-all",
               role === "teen"
@@ -75,6 +79,7 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
           <button
             type="button"
             onClick={() => setRole("parent")}
+            aria-pressed={role === "parent"}
             className={cn(
               "cursor-pointer rounded-xl px-4 py-1.5 text-sm font-medium transition-all",
               role === "parent"
@@ -87,15 +92,23 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
         </div>
       )}
       <form onSubmit={handleSubmit} className={cn("mx-auto flex flex-col items-center justify-center gap-3 sm:flex-row", compact ? "max-w-sm" : "max-w-md")}>
+        <label htmlFor={inputId} className="sr-only">
+          Email address for the TeenCents waitlist
+        </label>
         <input
+          id={inputId}
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="your@email.com"
+          autoComplete="email"
+          inputMode="email"
           required
+          aria-invalid={submitError ? "true" : "false"}
+          aria-describedby={submitError ? errorId : undefined}
           className={cn(
             "w-full rounded-2xl border border-border/80 bg-white/90 text-foreground shadow-[0_12px_30px_rgba(63,104,142,0.06)] placeholder:text-muted-foreground transition-all focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/40 sm:flex-1 font-body",
-            compact ? "px-4 py-2.5 text-sm" : "px-5 py-3.5"
+            compact ? "px-4 py-2.5 text-base sm:text-sm" : "px-5 py-3.5 text-base"
           )}
         />
         <button
@@ -106,11 +119,11 @@ const WaitlistForm = ({ showToggle = false, className, buttonText = "Join the wa
             compact ? "px-5 py-2.5 text-sm" : "px-8 py-3.5 text-base"
           )}
         >
-          {submitting ? "Submitting..." : buttonText}
+          {submitting ? "Joining..." : buttonText}
         </button>
       </form>
       {submitError && (
-        <p className="mt-3 text-center text-sm text-destructive">{submitError}</p>
+        <p id={errorId} className="mt-3 text-center text-sm text-destructive" role="alert">{submitError}</p>
       )}
     </div>
   );
