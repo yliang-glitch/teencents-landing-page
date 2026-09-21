@@ -63,9 +63,9 @@ const navItems = [
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden px-6 pb-20 pt-28 sm:pb-24 sm:pt-32">
-      <div className="absolute inset-0 opacity-[0.07] geo-grid" />
+      <div className="absolute inset-0 money-field" />
       <div className="absolute left-[-10%] top-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-      <div className="absolute right-[4%] top-20 h-[26rem] w-[26rem] rounded-full bg-gradient-to-br from-accent/10 via-primary/8 to-cyan/12 blur-3xl" />
+      <div className="absolute right-[4%] top-20 h-[26rem] w-[26rem] rounded-full bg-gradient-to-br from-accent/8 via-primary/7 to-cyan/10 blur-3xl" />
 
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
         <div className="text-center lg:text-left">
@@ -103,14 +103,17 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-4 text-left opacity-0 animate-fade-up-delay-3 sm:max-w-[34rem] sm:grid-cols-[auto_1fr] sm:items-start lg:max-w-[35rem]">
-            <div className="rounded-[1.35rem] border border-border/75 bg-white/88 px-4 py-3 shadow-[0_12px_28px_rgba(63,104,142,0.05)] backdrop-blur-sm">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Trusted early</p>
-              <p className="mt-2 font-display text-2xl font-bold tracking-[-0.04em] text-foreground">4.9/5</p>
+          <div className="mt-10 money-trail-card opacity-0 animate-fade-up-delay-3 sm:max-w-[35rem]">
+            <div className="money-trail-rail" aria-hidden="true">
+              <span />
+              <span />
+              <span />
             </div>
-            <div className="space-y-2 border-l border-border/80 pl-4 text-sm text-muted-foreground">
-              <p className="font-medium text-foreground/82">Loved by 500+ teens starting with real money habits.</p>
-              <p>Built for babysitting, tutoring, resale, dog walking, and creator cash.</p>
+            <div>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Every dollar gets a next move</p>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                Earn from real teen work, split it with intention, and watch the first $1,000 stack toward something that matters.
+              </p>
             </div>
           </div>
         </div>
@@ -118,6 +121,14 @@ const HeroSection = () => {
         <div className="relative opacity-0 animate-fade-up-delay-2">
           <div className="absolute left-1/2 top-14 h-[24rem] w-[24rem] -translate-x-1/2 rounded-full bg-gradient-to-br from-accent/14 via-primary/8 to-cyan/14 blur-3xl" />
           <div className="relative mx-auto max-w-[27rem]">
+            <div className="money-thread-badge -left-5 top-24 hidden lg:flex">
+              <span className="money-thread-dot" />
+              Earn
+              <span className="money-thread-arrow">→</span>
+              Split
+              <span className="money-thread-arrow">→</span>
+              Stack
+            </div>
             <div className="absolute inset-x-8 bottom-3 h-12 rounded-full bg-foreground/8 blur-2xl" />
             <div className="rounded-[2.9rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,249,255,0.88))] p-3 shadow-[0_32px_80px_rgba(63,104,142,0.14)] backdrop-blur-xl">
               <div className="rounded-[2.4rem] border border-border/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.99),rgba(246,249,255,0.97))] px-5 pb-5 pt-4">
@@ -217,10 +228,15 @@ const HeroSection = () => {
                 <div className="mt-4 rounded-[1.35rem] border border-border/60 bg-secondary/45 px-4 py-3">
                   <div className="flex items-center justify-between gap-4 text-sm">
                     <div>
-                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Next milestone</p>
+                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">First $1,000 trail</p>
                       <p className="mt-1 font-medium text-foreground">Concert tickets fund</p>
                     </div>
                     <p className="font-display text-xl font-bold text-primary">$72 left</p>
+                  </div>
+                  <div className="mt-3 money-trail-rail compact" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
                   </div>
                 </div>
               </div>

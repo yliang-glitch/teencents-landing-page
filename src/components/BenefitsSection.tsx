@@ -43,12 +43,17 @@ const BenefitsSection = () => {
 
             <div className="grid gap-8 border-border/70 md:grid-cols-3 md:divide-x md:divide-border/70">
               {benefits.map((benefit) => (
-                <div key={benefit.title} className="md:px-7 first:md:pl-0 last:md:pr-0">
+                <div key={benefit.title} className="benefit-trail-card md:px-7 first:md:pl-0 last:md:pr-0">
                   <div className="flex items-center gap-4">
                     <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary/80">
                       <benefit.icon className={`h-6 w-6 ${benefit.color}`} strokeWidth={1.8} />
                     </span>
                     <h3 className={`font-display text-[1.8rem] font-bold ${benefit.color}`}>{benefit.title}</h3>
+                  </div>
+                  <div className="mt-5 money-trail-rail compact" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
                   </div>
                   <p className="mt-4 max-w-xs text-base leading-7 text-muted-foreground">
                     {benefit.title === "Earn" && "Capture babysitting, tutoring, resale, gigs, and first paychecks without a spreadsheet."}
@@ -61,7 +66,7 @@ const BenefitsSection = () => {
           </div>
         </div>
 
-        <div className="mt-8 surface-card overflow-hidden rounded-[2rem] shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
+        <div className="mt-8 surface-card story-trail overflow-hidden rounded-[2rem] shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
           <div className="grid gap-0 lg:grid-cols-[1.25fr_0.75fr]">
             <div className="grid h-full gap-0 sm:grid-cols-[0.88fr_1.12fr]">
               <div className="min-h-[19rem] bg-[linear-gradient(180deg,rgba(224,233,255,0.92),rgba(240,233,255,0.9))]">
@@ -90,6 +95,11 @@ const BenefitsSection = () => {
                 <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground">
                   She used TeenCents to split piano money between spending and saving, keep her progress visible, and stay consistent while working toward a bigger goal.
                 </p>
+                <div className="mt-6 money-trail-rail" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </div>
               </div>
             </div>
             <div className="border-t border-border/70 px-8 py-8 lg:border-l lg:border-t-0 sm:px-9">

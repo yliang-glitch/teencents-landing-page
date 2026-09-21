@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer id="about" className="px-6 pb-10 pt-8 scroll-mt-28 sm:pt-12">
       <div className="mx-auto max-w-6xl">
-        <div className="surface-card overflow-hidden rounded-[2rem] px-8 py-8 shadow-[0_20px_50px_rgba(63,104,142,0.06)] sm:px-10 sm:py-10">
+        <div className="surface-card footer-trail overflow-hidden rounded-[2rem] px-8 py-8 shadow-[0_20px_50px_rgba(63,104,142,0.06)] sm:px-10 sm:py-10">
           <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
             <div>
               <p className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-gradient-neon">
@@ -22,6 +22,11 @@ const Footer = () => {
               <p className="mt-4 max-w-md text-lg leading-relaxed text-muted-foreground">
                 Join the waitlist for the app that helps teens track hustle money, save toward real goals, and learn as they go.
               </p>
+              <div className="mt-6 money-trail-rail" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </div>
             </div>
 
             <div>

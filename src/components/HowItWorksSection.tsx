@@ -56,7 +56,7 @@ const HowItWorksSection = () => {
             </p>
           </div>
 
-          <div className="surface-card overflow-hidden rounded-[2rem] shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
+          <div className="surface-card flow-trail overflow-hidden rounded-[2rem] shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
             <div className="grid md:grid-cols-2">
               {steps.map((step, index) => (
                 <div
@@ -70,6 +70,11 @@ const HowItWorksSection = () => {
                     </span>
                   </div>
                   <h3 className="mt-5 font-display text-2xl font-bold text-foreground">{step.title}</h3>
+                  <div className="mt-4 money-trail-rail compact" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
                   <p className="mt-3 max-w-sm text-base leading-7 text-muted-foreground">{step.description}</p>
                 </div>
               ))}
@@ -77,7 +82,7 @@ const HowItWorksSection = () => {
           </div>
         </div>
 
-        <div className="mt-8 surface-card overflow-hidden rounded-[2rem] shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
+        <div className="mt-8 surface-card coach-trail overflow-hidden rounded-[2rem] shadow-[0_20px_50px_rgba(63,104,142,0.06)]">
           <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
             <div className="p-8 sm:p-10">
               <div className="max-w-md">
@@ -126,6 +131,11 @@ const HowItWorksSection = () => {
                   <p className="text-sm leading-6 text-muted-foreground">
                     Short answers first, with more context only when you want it.
                   </p>
+                  <div className="money-trail-rail compact" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
                 </div>
               </div>
             </div>

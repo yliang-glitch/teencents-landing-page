@@ -152,39 +152,152 @@
   .brand-motif {
     display: inline-flex;
     align-items: center;
-    gap: 0.2rem;
+    gap: 0.22rem;
   }
 
   .brand-motif span {
     display: block;
-    height: 0.38rem;
+    height: 0.42rem;
     border-radius: 999px;
     background-image: linear-gradient(120deg, hsl(var(--accent)), hsl(var(--primary)), hsl(var(--cyan)));
+    box-shadow: 0 8px 18px hsl(var(--primary) / 0.14);
   }
 
   .brand-motif span:nth-child(1) {
-    width: 0.4rem;
+    width: 0.42rem;
   }
 
   .brand-motif span:nth-child(2) {
-    width: 0.95rem;
+    width: 1.35rem;
   }
 
   .brand-motif span:nth-child(3) {
-    width: 0.6rem;
+    width: 0.58rem;
+  }
+
+  .money-field {
+    opacity: 0.58;
+    background-image:
+      radial-gradient(circle at 18% 18%, hsl(var(--primary) / 0.09), transparent 22%),
+      radial-gradient(circle at 82% 20%, hsl(var(--accent) / 0.08), transparent 24%),
+      radial-gradient(circle at 76% 78%, hsl(var(--cyan) / 0.08), transparent 22%),
+      linear-gradient(115deg, transparent 0 39%, hsl(var(--primary) / 0.055) 39.2%, transparent 39.6% 54%, hsl(var(--cyan) / 0.055) 54.2%, transparent 54.6%);
+  }
+
+  .money-trail-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid hsl(var(--border) / 0.74);
+    border-radius: 1.45rem;
+    background: linear-gradient(135deg, hsl(var(--card) / 0.9), hsl(var(--secondary) / 0.72));
+    padding: 1rem;
+    box-shadow: 0 18px 40px hsl(207 36% 40% / 0.07);
+    backdrop-filter: blur(12px);
+  }
+
+  .money-trail-rail {
+    display: grid;
+    grid-template-columns: 0.75rem minmax(2.6rem, 1fr) 0.75rem;
+    align-items: center;
+    width: min(12rem, 100%);
+    gap: 0.38rem;
+  }
+
+  .money-trail-rail span {
+    display: block;
+    height: 0.75rem;
+    border-radius: 999px;
+    background: linear-gradient(120deg, hsl(var(--accent)), hsl(var(--primary)), hsl(var(--cyan)));
+    box-shadow: 0 10px 20px hsl(var(--primary) / 0.13);
+  }
+
+  .money-trail-rail span:nth-child(2) {
+    height: 0.34rem;
+  }
+
+  .money-trail-rail.compact {
+    width: min(8.5rem, 100%);
+    grid-template-columns: 0.55rem minmax(2rem, 1fr) 0.55rem;
+    gap: 0.3rem;
+  }
+
+  .money-trail-rail.compact span {
+    height: 0.55rem;
+  }
+
+  .money-trail-rail.compact span:nth-child(2) {
+    height: 0.26rem;
+  }
+
+  .money-thread-badge {
+    position: absolute;
+    z-index: 4;
+    align-items: center;
+    gap: 0.45rem;
+    border: 1px solid hsl(var(--border) / 0.76);
+    border-radius: 999px;
+    background: hsl(var(--card) / 0.92);
+    padding: 0.65rem 0.9rem;
+    color: hsl(var(--foreground) / 0.78);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 18px 44px hsl(207 36% 40% / 0.1);
+    backdrop-filter: blur(14px);
+  }
+
+  .money-thread-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 999px;
+    background: linear-gradient(120deg, hsl(var(--accent)), hsl(var(--primary)), hsl(var(--cyan)));
+  }
+
+  .money-thread-arrow {
+    color: hsl(var(--primary));
+  }
+
+  .benefit-trail-card {
+    position: relative;
+  }
+
+  .benefit-trail-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -0.75rem;
+    width: 3rem;
+    height: 0.24rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary)), hsl(var(--cyan)));
+    opacity: 0.65;
+  }
+
+  .story-trail,
+  .flow-trail,
+  .coach-trail,
+  .footer-trail {
+    position: relative;
+  }
+
+  .story-trail::after,
+  .flow-trail::after,
+  .coach-trail::after,
+  .footer-trail::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 999px;
+    border: 1px solid hsl(var(--primary) / 0.16);
+    right: -3.5rem;
+    bottom: -4rem;
+    box-shadow: inset 0 0 0 1rem hsl(var(--cyan) / 0.025);
   }
 }
 
-.geo-pattern {
-  background-image:
-    radial-gradient(circle at 18% 30%, hsl(var(--geo-a) / 0.05) 0%, transparent 45%),
-    radial-gradient(circle at 84% 22%, hsl(var(--geo-b) / 0.05) 0%, transparent 42%),
-    radial-gradient(circle at 72% 86%, hsl(var(--geo-c) / 0.04) 0%, transparent 44%);
-}
-
-.geo-grid {
-  background-image:
-    linear-gradient(hsl(var(--grid-line) / 0.16) 1px, transparent 1px),
-    linear-gradient(90deg, hsl(var(--grid-line) / 0.16) 1px, transparent 1px);
-  background-size: 68px 68px;
-}
